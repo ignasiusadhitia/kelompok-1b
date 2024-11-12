@@ -8,18 +8,18 @@ export default {
     extend: {
       colors: {
         "dark-blue-100": "#0E1F51",
-        "dark-blue-75": "#0E1F51BF",
-        "dark-blue-50": "#0E1F515F",
-        "dark-blue-25": "#0E1F5100",
-        "dark-blue-10": "#0E1F511A",
+        "dark-blue-75": "rgba(14, 31, 81, 0.75)",
+        "dark-blue-50": "rgba(14, 31, 81, 0.5)",
+        "dark-blue-25": "rgba(14, 31, 81, 0.25)",
+        "dark-blue-10": "rgba(14, 31, 81, 0.1)",
         "peach-red-100": "#FF3E54",
-        "peach-red-75": "#FF3E54BF",
-        "peach-red-50": "#FF3E545F",
-        "peach-red-25": "#FF3E5400",
-        "peach-red-10": "#FF3E541A",
-        "black-shade": "##252525",
+        "peach-red-75": "rgba(255, 62, 84, 0.75)",
+        "peach-red-50": "rgba(255, 62, 84, 0.5)",
+        "peach-red-25": "rgba(255, 62, 84, 0.25)",
+        "peach-red-10": "rgba(255, 62, 84, 0.1)",
+        "black-shade": "#252525",
         "off-white": "#F7F7F7",
-        white: "#081717",
+        white: "#ffffff",
       },
       fontSize: {
         h1: "4rem", // Title / Header 1
