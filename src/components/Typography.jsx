@@ -1,14 +1,29 @@
 import React from "react";
 import PropTypes from "prop-types";
+import classNames from "classnames";
 
 const Typography = ({
   variant,
   children,
-  color = "text-black",
-  className = "",
-  style = {},
+  color = "text-black", // Default parameter for color
+  className = "", // Default parameter for className
+  style = {}, // Default parameter for style
 }) => {
-  const baseClass = "font-raleway";
+  // Mapping variant to HTML tag
+  const tagMap = {
+    h1: "h1",
+    h2: "h2",
+    h3: "h3",
+    subtitle: "h4",
+    strong: "strong",
+    bodycopy: "p",
+    small: "small",
+    button: "span",
+    pretext: "p",
+    label: "label",
+  };
+
+  // CSS classes for each variant
   const variantClasses = {
     h1: "font-bold text-h1 leading-h1",
     h2: "font-bold text-h2 leading-h2",
@@ -22,12 +37,21 @@ const Typography = ({
     label: "font-medium text-label leading-label",
   };
 
-  const appliedClasses = `${baseClass} ${variantClasses[variant] || ""} ${color} ${className}`;
+  // Get the appropriate HTML tag based on the variant
+  const Tag = tagMap[variant] || "div";
+
+  // Styling based on the variant and color
+  const appliedClasses = classNames(
+    "font-raleway", // Base class
+    variantClasses[variant],
+    color,
+    className
+  );
 
   return (
-    <div className={appliedClasses} style={style}>
+    <Tag className={appliedClasses} style={style}>
       {children}
-    </div>
+    </Tag>
   );
 };
 
