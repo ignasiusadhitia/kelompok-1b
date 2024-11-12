@@ -1,8 +1,8 @@
 import React from "react";
-import Design from "../assets/design.png";
-import Research from "../assets/research.png";
-import Develop from "../assets/develop.png";
-import Test from "../assets/test.png";
+import designIcon from "../assets/design.png";
+import developIcon from "../assets/develop.png";
+import researchIcon from "../assets/research.png";
+import testIcon from "../assets/test.png";
 import OurProcessCard from "./OurProcessCard";
 import Typography from "./Typography";
 
@@ -11,28 +11,28 @@ const data = [
     title: "Research",
     description:
       "It is a long established fact that a reader will be distracted by the readable content of a page.",
-    icon: Research,
+    icon: researchIcon,
     index: "01",
   },
   {
     title: "Design",
     description:
       "It is a long established fact that a reader will be distracted by the readable content of a page.",
-    icon: Design,
+    icon: designIcon,
     index: "02",
   },
   {
     title: "Develop",
     description:
       "It is a long established fact that a reader will be distracted by the readable content of a page.",
-    icon: Develop,
+    icon: developIcon,
     index: "03",
   },
   {
     title: "Test",
     description:
       "It is a long established fact that a reader will be distracted by the readable content of a page.",
-    icon: Test,
+    icon: testIcon,
     index: "04",
   },
 ];
