@@ -1,12 +1,13 @@
 import React from "react";
 import Typography from "./Typography";
-import { Rectangle, Research } from "../assets";
+import researchIcon from "../assets/research.png";
+import rectangleIcon from "../assets/rectangle.png";
 import PropTypes from "prop-types";
 
 const OurProcessCard = ({
   title = "Research",
   description = "It is a long established fact that a reader will be distra by the readable content of a page.",
-  icon = Research,
+  icon = researchIcon,
   index = "01",
 }) => {
   return (
@@ -26,7 +27,7 @@ const OurProcessCard = ({
         {title}
       </Typography>
 
-      <img src={Rectangle} alt="" className="w-[90px]" />
+      <img src={rectangleIcon} alt="" className="w-[90px]" />
       <Typography variant="bodycopy">{description}</Typography>
     </div>
   );
