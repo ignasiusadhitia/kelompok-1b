@@ -1,7 +1,12 @@
-import React from 'react'
+import React from "react";
+import OurWorkSection from "../components/OurWorkSection";
 
 const Portfolio = () => {
-  return <div>Portfolio</div>
-}
+  return (
+    <div>
+      <OurWorkSection />
+    </div>
+  );
+};
 
-export default Portfolio
+export default Portfolio;
