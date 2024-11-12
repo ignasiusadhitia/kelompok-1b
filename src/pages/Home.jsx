@@ -1,10 +1,10 @@
 import React from "react";
-import TestimonialCard from "../components/TestimonialCard";
+import TestimonialCardSection from "../components/TestimonialCardSection";
 
 const Home = () => {
   return (
     <div>
-      <TestimonialCard />
+      <TestimonialCardSection />
     </div>
   );
 };
