@@ -15,7 +15,7 @@ const App = () => {
   return (
     // To minimize risk of breaking changes, and future updates on react-router-dom v7
     <Router future={{ v7_startTransition: true, v7_relativeSplatPath: true }}>
-      <Example />
+      {/* <Example /> */}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
