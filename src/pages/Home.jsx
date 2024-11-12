@@ -1,7 +1,12 @@
-import React from 'react'
+import React from "react";
+import OurProcessCard from "../components/OurProcessCard";
 
 const Home = () => {
-  return <div>Home</div>
-}
+  return (
+    <div>
+      <OurProcessCard />
+    </div>
+  );
+};
 
-export default Home
+export default Home;

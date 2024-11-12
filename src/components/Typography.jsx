@@ -42,7 +42,7 @@ const Typography = ({
 
   // Styling based on the variant and color
   const appliedClasses = classNames(
-    "font-raleway", // kelas dasar
+    "font-raleway", // Base class
     variantClasses[variant],
     color,
     className
