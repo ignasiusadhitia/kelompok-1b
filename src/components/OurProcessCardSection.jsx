@@ -1,5 +1,8 @@
 import React from "react";
-import { Design, Research, Develop, Test } from "../assets";
+import Design from "../assets/design.png";
+import Research from "../assets/research.png";
+import Develop from "../assets/develop.png";
+import Test from "../assets/test.png";
 import OurProcessCard from "./OurProcessCard";
 import Typography from "./Typography";
 
