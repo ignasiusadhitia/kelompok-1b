@@ -1,6 +1,7 @@
 import React from "react";
 import Typography from "./Typography";
-import { Rectangle, Research } from "../assets";
+import Rectangle from "../assets/Rectangle.png";
+import Research from "../assets/Research.png";
 import PropTypes from "prop-types";
 
 const OurProcessCard = ({
