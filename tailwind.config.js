@@ -19,7 +19,7 @@ export default {
         "peach-red-10": "#FF3E541A",
         "black-shade": "##252525",
         "off-white": "#F7F7F7",
-        white: "#081717",
+        white: "#ffffff",
       },
       fontSize: {
         h1: "4rem", // Title / Header 1
