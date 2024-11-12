@@ -1,8 +1,12 @@
 import React from "react";
-import OurProcessCardSection from "../components/OurProcessCardSection";
+import TestimonialCard from "../components/TestimonialCard";
 
 const Home = () => {
-  return <div>Home</div>;
+  return (
+    <div>
+      <TestimonialCard />
+    </div>
+  );
 };
 
 export default Home;

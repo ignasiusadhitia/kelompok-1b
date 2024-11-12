@@ -30,7 +30,7 @@ const Typography = ({
     h3: "font-bold text-h3 leading-h3",
     subtitle: "font-medium text-subtitle leading-subtitle",
     strong: "font-bold text-strong leading-strong",
-    bodycopy: "font-normal text-bodycopy leading-bodycopy",
+    bodycopy: "text-bodycopy leading-bodycopy",
     small: "font-medium text-small leading-small",
     button: "font-semibold text-button leading-button",
     pretext: "font-semibold text-pretext leading-pretext",
@@ -42,7 +42,7 @@ const Typography = ({
 
   // Styling based on the variant and color
   const appliedClasses = classNames(
-    "font-raleway", // Base class
+    "font-raleway", // kelas dasar
     variantClasses[variant],
     color,
     className
