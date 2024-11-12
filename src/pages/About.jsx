@@ -6,7 +6,7 @@ import TeamCard from "../components/TeamCard";
 const About = () => {
   return (
     <>
-      <BannerSection />
+      <BannerSection title={"About Us"} breadCrumb={"Home / About Us"} />
       <AboutUsSection />
       <TeamCard/>
     </>
