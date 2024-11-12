@@ -1,6 +1,7 @@
 import React from "react";
 import Typography from "./Typography";
 
+// data object
 const teamMembers = [
   {
     name: "Larry F. Burnett",
@@ -43,7 +44,7 @@ const teamMembers = [
     image: "src/assets/AssetsAboutPages/Rectangle 17.png",
   },
 ];
-
+// data object end
 function TeamSection() {
   return (
     <section className="">
@@ -64,26 +65,25 @@ function TeamSection() {
         </Typography>
       </div>
 
+      {/* Looping to retrieve data */}
       <div className="grid grid-cols-4 gap-10 px-40">
         {teamMembers.map((member, index) => (
-          <div className="" key={index}>
+          <div className="text-center" key={index}>
             <img src={member.image} alt={member.name} />
             <Typography
               variant="strong"
               color="text-peach-red-100"
-              className="mt-10 font-bold text-center"
+              className="font-bold mt-10"
             >
               {member.name}
             </Typography>
-            <Typography
-              variant="pretext"
-              className="text-center text-sm mt-3"
-            >
+            <Typography variant="pretext" className="text-sm mt-3">
               {member.role}
             </Typography>
           </div>
         ))}
       </div>
+      {/* Looping to retrieve data end */}
     </section>
   );
 }
