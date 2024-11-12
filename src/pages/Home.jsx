@@ -1,12 +1,8 @@
 import React from "react";
-import OurProcessCard from "../components/OurProcessCard";
+import OurProcessCardSection from "../components/OurProcessCardSection";
 
 const Home = () => {
-  return (
-    <div>
-      <OurProcessCard />
-    </div>
-  );
+  return <div>Home</div>;
 };
 
 export default Home;
