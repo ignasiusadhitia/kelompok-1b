@@ -1,5 +1,7 @@
 import React from "react";
 import Typography from "./Typography";
+import MaskGroup from "../assets/AssetsAboutPages/MaskGroup.png";
+import Icon from "../assets/AssetsAboutPages/Icon.svg"
 export default function AboutUsSection() {
   return (
     <section className="bg-off-white ">
@@ -7,7 +9,7 @@ export default function AboutUsSection() {
         {/* image */}
         <div className="">
           <img
-            src="src/assets/AssetsAboutPages/Mask group.png"
+            src={MaskGroup}
             alt="About Us"
             className="w-[40rem]"
           />
@@ -47,7 +49,7 @@ export default function AboutUsSection() {
           <div className="flex bg-[#ffffff] gap-5 px-3 py-2 rounded-[10px] mt-7">
             <div className="bg-off-white px-3 py-2 rounded-[10px] ">
               <img
-                src="src/assets/AssetsAboutPages/icon.svg"
+                src={Icon}
                 className="w-[25px]"
               />
             </div>

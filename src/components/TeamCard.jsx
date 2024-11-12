@@ -1,47 +1,51 @@
 import React from "react";
 import Typography from "./Typography";
+import Person1 from "../assets/AssetsAboutPages/Person1.png";
+import Person2 from "../assets/AssetsAboutPages/Person2.png";
+import Person3 from "../assets/AssetsAboutPages/Person3.png";
+import Person4 from "../assets/AssetsAboutPages/Person4.png";
 
 // data object
 const teamMembers = [
   {
     name: "Larry F. Burnett",
     role: "CEO",
-    image: "src/assets/AssetsAboutPages/Rectangle 14.png",
+    image: Person1,
   },
   {
     name: "Meghan J. Webb",
     role: "CTO",
-    image: "src/assets/AssetsAboutPages/Rectangle 15.png",
+    image: Person2 ,
   },
   {
     name: "Yvonne J. Cullum",
     role: "CFO",
-    image: "src/assets/AssetsAboutPages/Rectangle 16.png",
+    image: Person3 ,
   },
   {
     name: "Diana H. Williams",
     role: "COO",
-    image: "src/assets/AssetsAboutPages/Rectangle 17.png",
+    image: Person4,
   },
   {
     name: "Larry F. Burnett",
     role: "CEO",
-    image: "src/assets/AssetsAboutPages/Rectangle 14.png",
+    image: Person1,
   },
   {
     name: "Meghan J. Webb",
     role: "CTO",
-    image: "src/assets/AssetsAboutPages/Rectangle 15.png",
+    image: Person2,
   },
   {
     name: "Yvonne J. Cullum",
     role: "CFO",
-    image: "src/assets/AssetsAboutPages/Rectangle 16.png",
+    image: Person3,
   },
   {
     name: "Diana H. Williams",
     role: "COO",
-    image: "src/assets/AssetsAboutPages/Rectangle 17.png",
+    image: Person4,
   },
 ];
 // data object end
