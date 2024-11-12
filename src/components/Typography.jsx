@@ -5,25 +5,25 @@ import classNames from "classnames";
 const Typography = ({
   variant,
   children,
-  color = "text-black", // Default parameter untuk color
-  className = "", // Default parameter untuk className
-  style = {}, // Default parameter untuk style
+  color = "text-black", // Default parameter for color
+  className = "", // Default parameter for className
+  style = {}, // Default parameter for style
 }) => {
-  // Pemetaan variant ke tag HTML
+  // Mapping variant to HTML tag
   const tagMap = {
     h1: "h1",
     h2: "h2",
     h3: "h3",
-    subtitle: "h4", // Subtitle bisa menggunakan h4
+    subtitle: "h4",
     strong: "strong",
-    bodycopy: "p", // Bodycopy lebih semantik sebagai paragraf
+    bodycopy: "p",
     small: "small",
-    button: "button", // Button Text menggunakan tag button
-    pretext: "p", // Pretext sebagai paragraf
+    button: "span",
+    pretext: "p",
     label: "label",
   };
 
-  // Kelas CSS berdasarkan variant
+  // CSS classes for each variant
   const variantClasses = {
     h1: "font-bold text-h1 leading-h1",
     h2: "font-bold text-h2 leading-h2",
@@ -37,10 +37,10 @@ const Typography = ({
     label: "font-medium text-label leading-label",
   };
 
-  // Mengambil tag yang sesuai dari pemetaan
+  // Get the appropriate HTML tag based on the variant
   const Tag = tagMap[variant] || "div";
 
-  // Menyusun kelas dengan classnames
+  // Styling based on the variant and color
   const appliedClasses = classNames(
     "font-raleway", // kelas dasar
     variantClasses[variant],
