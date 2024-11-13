@@ -49,7 +49,7 @@ const data = [
 
 const OurExperticeCardSection = () => {
   return (
-    <section className="container mx-auto py-[100px]">
+    <section className="container mx-auto pt-[100px]">
       <div className="flex justify-center">
         <Typography
           variant="strong"

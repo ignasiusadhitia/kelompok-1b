@@ -24,7 +24,7 @@ const OurWorkSection = () => {
       : imageData.filter((image) => image.category === selectedCategory);
 
   return (
-    <section className="container mx-auto py-[100px]">
+    <section className="container mx-auto pt-[100px]">
       <Typography
         variant="h3"
         className="text-center text-peach-red-100 mb-2.5"
