@@ -67,7 +67,7 @@ Typography.propTypes = {
     "button",
     "pretext",
     "label",
-  ]).isRequired,
+  ]),
   children: PropTypes.node.isRequired,
   color: PropTypes.string,
   className: PropTypes.string,

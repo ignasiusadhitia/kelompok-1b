@@ -13,37 +13,37 @@ const Navbar = () => {
 
   return (
     <header className="py-4 bg-white">
-      <div className="container mx-auto md:flex md:justify-between items-center px-4 md:px-8">
+      <div className="container mx-auto md:flex md:justify-between items-center">
         <div className="flex justify-between items-center">
-            {/* Logo */}
-            <Link
+          {/* Logo */}
+          <Link
             to="/"
             onClick={() => handleMenuClick("")}
             className="flex items-center"
-            >
+          >
             <img src={logoipsum} alt="Logo" className="h-8" />
-            </Link>
+          </Link>
 
-            {/* Hamburger Menu Button */}
-            <button
+          {/* Hamburger Menu Button */}
+          <button
             className="md:hidden text-gray-500 focus:outline-none"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            >
+          >
             <svg
-                className="h-6 w-6"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
+              className="h-6 w-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
             >
-                <path
+              <path
                 strokeLinecap="round"
                 strokeLinejoin="round"
                 strokeWidth="2"
                 d="M4 6h16M4 12h16M4 18h16"
-                ></path>
+              ></path>
             </svg>
-            </button>
+          </button>
         </div>
 
         {/* Navigation Links */}

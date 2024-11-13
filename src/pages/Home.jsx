@@ -1,7 +1,14 @@
 import React from "react";
+import HeroSection from "../components/HeroSection";
+import AboutUsSection from "../components/AboutUsSection";
 
 const Home = () => {
-  return <div>Home</div>;
+  return (
+    <div>
+      <HeroSection />
+      <AboutUsSection />
+    </div>
+  );
 };
 
 export default Home;

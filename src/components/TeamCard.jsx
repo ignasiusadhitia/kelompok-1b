@@ -51,7 +51,7 @@ const teamMembers = [
 // data object end
 function TeamSection() {
   return (
-    <section className="">
+    <section className="container mx-auto">
       <div className="flex flex-col text-center mt-10 mb-10">
         <Typography
           variant="strong"
