@@ -20,16 +20,32 @@ const Footer = () => {
           </p>
           <div className="flex space-x-4">
             <a href="#" className="text-white hover:text-red-500">
-              <img src={linkedinIcon} alt="linkedin-icon" classNameName="w-10 h-10" />
+              <img
+                src={linkedinIcon}
+                alt="linkedin-icon"
+                className="w-10 h-10"
+              />
             </a>
             <a href="#" className="text-white hover:text-red-500">
-              <img src={instagramIcon} alt="linkedin-icon" classNameName="w-10 h-10" />
+              <img
+                src={instagramIcon}
+                alt="linkedin-icon"
+                className="w-10 h-10"
+              />
             </a>
             <a href="#" className="text-white hover:text-red-500">
-              <img src={facebookIcon} alt="linkedin-icon" classNameName="w-10 h-10" />
+              <img
+                src={facebookIcon}
+                alt="linkedin-icon"
+                className="w-10 h-10"
+              />
             </a>
             <a href="#" className="text-white hover:text-red-500">
-              <img src={twitterIcon} alt="linkedin-icon" classNameName="w-10 h-10" />
+              <img
+                src={twitterIcon}
+                alt="linkedin-icon"
+                className="w-10 h-10"
+              />
             </a>
           </div>
         </div>
@@ -94,7 +110,9 @@ const Footer = () => {
                   className="w-12 h-12 object-contain bg-white rounded-md p-2"
                 />
                 <div>
-                  <h4 className="font-bold text-peach-red-100">Wordpress Dev.</h4>
+                  <h4 className="font-bold text-peach-red-100">
+                    Wordpress Dev.
+                  </h4>
                   <p className="text-sm">1-5 Years of Exp.</p>
                 </div>
               </div>
@@ -107,7 +125,9 @@ const Footer = () => {
                   className="w-12 h-12 object-contain bg-white rounded-md p-2"
                 />
                 <div>
-                  <h4 className="font-bold text-peach-red-100">Python Developer</h4>
+                  <h4 className="font-bold text-peach-red-100">
+                    Python Developer
+                  </h4>
                   <p className="text-sm">1-5 Years of Exp.</p>
                 </div>
               </div>
@@ -137,6 +157,6 @@ const Footer = () => {
       </div>
     </footer>
   );
-}
+};
 
 export default Footer;
