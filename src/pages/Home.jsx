@@ -12,7 +12,7 @@ import QuoteCard from "../components/QuoteCard";
 
 const Home = () => {
   return (
-    <div>
+    <div className="overflow-hidden">
       <HeroSection />
       <AboutUsSection />
       <OurProcessCardSection />
