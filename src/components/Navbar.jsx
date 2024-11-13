@@ -121,7 +121,8 @@ const Navbar = () => {
           </ul>
 
           <Link
-            to="/"
+            to="/contact"
+            onClick={() => handleMenuClick("contact")}
             className="bg-peach-red-100 hover:bg-red-700 text-white font-bold py-2 px-4 rounded"
           >
             Get in Touch
