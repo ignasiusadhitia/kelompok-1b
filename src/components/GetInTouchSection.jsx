@@ -3,8 +3,9 @@ import Typography from "./Typography";
 import emailIcon from "../assets/AssetContactPages/email-icon.png";
 import phoneIcon from "../assets/AssetContactPages/phone-icon.png";
 import locationIcon from "../assets/AssetContactPages/location-icon.png";
+import PropTypes from "prop-types";
 
-const GetInTouchSection = () => {
+const GetInTouchSection = ({ titleColor = "text-dark-blue-100" }) => {
   return (
     <div className="min-h-screen py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-6xl mx-auto">
@@ -17,7 +18,7 @@ const GetInTouchSection = () => {
           </Typography>
           <Typography
             variant="h2"
-            className="text-center text-dark-blue-100 mb-10"
+            className={`text-center ${titleColor} mb-10`}
           >
             Hey! Let&apos;s Talk
           </Typography>
@@ -161,6 +162,10 @@ const GetInTouchSection = () => {
       </div>
     </div>
   );
+};
+
+GetInTouchSection.propTypes = {
+  titleColor: PropTypes.string,
 };
 
 export default GetInTouchSection;
