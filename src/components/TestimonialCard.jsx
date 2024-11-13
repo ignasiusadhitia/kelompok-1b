@@ -7,11 +7,11 @@ import Typography from "./Typography";
 const TestimonialCard = ({
   clientImg = client,
   testimony = "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed.",
-  clientName = "Samual Karl",
   clientRole = "CEO",
+  clientName = "Samual Karl",
 }) => {
   return (
-    <div className="bg-dark-blue-10 rounded-md p-[30px] mx-auto w-screen md:max-w-[750px] mb-12">
+    <div className="bg-off-white rounded-md p-[30px] mx-auto w-screen md:max-w-[750px] mb-12">
       <div className="flex justify-between items-center">
         <img src={clientImg} alt="" />
         <img src={quote} alt="" className="w-[60px] h-[60px]" />
