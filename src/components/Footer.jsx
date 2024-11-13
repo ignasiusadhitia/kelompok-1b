@@ -6,8 +6,17 @@ import linkedinIcon from "../assets/linkedin-icon.png";
 import reactIcon from "../assets/react-icon.png";
 import wordpressIcon from "../assets/wordpress-icon.png";
 import wixIcon from "../assets/wix-icon.png";
+import { useNavigate } from "react-router-dom";
 
 const Footer = () => {
+    const navigate = useNavigate();
+  
+  // Function to handle navigation
+    const handleNavigation = (path) => {
+      navigate(path);
+      window.scrollTo(0, 0);
+    };
+
   return (
     <footer className="bg-dark-blue-100 text-white py-10 md:py-16">
       <div className="container mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-8">
@@ -54,34 +63,34 @@ const Footer = () => {
           <hr className="border-2 border-peach-red-100 w-10" />
           <ul className="space-y-2 pt-4">
             <li>
-              <a href="#" className="text-white hover:text-red-500">
+              <span onClick={() => handleNavigation("/our-services")} className="text-white hover:text-red-500 cursor-pointer">
                 Web Design/Development
-              </a>
+              </span>
             </li>
             <li>
-              <a href="#" className="text-white hover:text-red-500">
+              <span onClick={() => handleNavigation("/our-services")} className="text-white hover:text-red-500 cursor-pointer">
                 App Development
-              </a>
+              </span>
             </li>
             <li>
-              <a href="#" className="text-white hover:text-red-500">
+              <span onClick={() => handleNavigation("/our-services")} className="text-white hover:text-red-500 cursor-pointer">
                 UI/UX Design
-              </a>
+              </span>
             </li>
             <li>
-              <a href="#" className="text-white hover:text-red-500">
+              <span onClick={() => handleNavigation("/our-services")} className="text-white hover:text-red-500 cursor-pointer">
                 HubSpot Integration
-              </a>
+              </span>
             </li>
             <li>
-              <a href="#" className="text-white hover:text-red-500">
+              <span onClick={() => handleNavigation("/our-services")} className="text-white hover:text-red-500 cursor-pointer">
                 Email Marketing
-              </a>
+              </span>
             </li>
             <li>
-              <a href="#" className="text-white hover:text-red-500">
+              <span onClick={() => handleNavigation("/our-services")} className="text-white hover:text-red-500 cursor-pointer">
                 Website Migration
-              </a>
+              </span>
             </li>
           </ul>
         </div>
