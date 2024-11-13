@@ -7,6 +7,7 @@ import QuoteCard from "../components/QuoteCard";
 const About = () => {
   return (
     <>
+      {/* send props for change title and bread crumb */}
       <BannerSection title={"About Us"} breadCrumb={"Home / About Us"} />
       <AboutUsSection />
       <TeamCard />
