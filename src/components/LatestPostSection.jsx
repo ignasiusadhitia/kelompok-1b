@@ -6,6 +6,7 @@ import Person1 from "../assets/AssetsBlogPages/Person1.png";
 import Person2 from "../assets/AssetsBlogPages/Person2.png";
 import Person3 from "../assets/AssetsBlogPages/Person3.png";
 import Typography from "./Typography";
+import { Link } from "react-router-dom";
 
 export default function LatestPostSection() {
   return (
@@ -34,10 +35,10 @@ export default function LatestPostSection() {
 
       <div className="grid grid-cols-2 gap-5 container mx-auto px-10">
         {/* article 1 */}
-        <div className="flex row-span-2 flex-col h-fit rounded-lg shadow-md shadow-peach-red-25 justify-center p-5">
-          <a href="" className="w-full group overflow-hidden">
+        <Link className="flex row-span-2 flex-col h-fit rounded-lg shadow-md shadow-peach-red-25 justify-center p-5 hover:shadow-peach-red-50">
+          <div href="" className="w-full group overflow-hidden">
             <img src={Article1} className="w-full object-cover" alt="" />
-          </a>
+          </div>
           <div className="flex flex-col text-black">
             <p className="text-xs mt-2 font-bold text-gray-500">May 4th, 2022</p>
             <h3 className="text-xl font-bold text-peach-red-100 mt-3">
@@ -51,20 +52,20 @@ export default function LatestPostSection() {
               <span className="text-xs">2 Min Read</span>
             </div>
           </div>
-        </div>
+        </Link>
         {/* article 1 end */}
 
         
         {/* article 2 */}
         <div className="flex flex-col gap-5">
-          <div className=" flex h-fit rounded-lg shadow-md shadow-peach-red-25 justify-center p-5">
-            <a href="" className="h-full">
+          <Link className=" flex h-fit rounded-lg shadow-md shadow-peach-red-25 justify-center p-5 hover:shadow-peach-red-50">
+            <div href="" className="h-full">
               <img
                 src={Article2}
                 className="h-full object-cover rounded-lg"
                 alt=""
               />
-            </a>
+            </div>
             <div className=" flex flex-col ps-4">
               <p className="text-xs font-bold text-gray-500">Apr 27th, 2022</p>
               <h3 className="text-xl font-bold text-peach-red-100 mt-5">
@@ -78,18 +79,18 @@ export default function LatestPostSection() {
                 <span className="text-xs">2 Min Read</span>
               </div>
             </div>
-          </div>
+          </Link>
           {/* article 2 end */}
 
           {/* article 3 */}
-          <div className="flex h-fit rounded-lg shadow-md shadow-peach-red-25 justify-center p-5">
-            <a href="" className="h-full">
+          <Link className="flex h-fit rounded-lg shadow-md shadow-peach-red-25 justify-center p-5 hover:shadow-peach-red-50">
+            <div href="" className="h-full">
               <img
                 src={Article3}
                 className="h-full object-cover rounded-lg"
                 alt=""
               />
-            </a>
+            </div>
             <div className=" flex flex-col ps-4">
               <p className="text-xs font-bold text-gray-500">Apr 27th, 2022</p>
               <h3 className="text-xl font-bold text-peach-red-100 mt-5">
@@ -103,7 +104,7 @@ export default function LatestPostSection() {
                 <span className="text-xs">2 Min Read</span>
               </div>
             </div>
-          </div>
+          </Link>
           {/* article 3 end */}
         </div>
       </div>

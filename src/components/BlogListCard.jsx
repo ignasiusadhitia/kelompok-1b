@@ -7,6 +7,7 @@ import Person1 from "../assets/AssetsBlogPages/Person1.png";
 import Person2 from "../assets/AssetsBlogPages/Person2.png";
 import Person3 from "../assets/AssetsBlogPages/Person3.png";
 import PropTypes from "prop-types";
+import { Link } from "react-router-dom";
 
 // Data object
 const articles = [
@@ -104,9 +105,9 @@ export default function BlogListCard({ maxPosts }) {
       <div className="grid grid-cols-3 gap-10 container mx-auto px-10 py-10">
         {/* looping to retrieve data */}
         {displayedArticles.map((article, index) => (
-          <div
+          <Link
             key={index}
-            className="flex flex-col h-fit rounded-lg shadow-md shadow-[#252525]-20 justify-center p-5"
+            className="flex flex-col h-fit rounded-lg shadow-md shadow-[#252525]-20 justify-center p-5 hover:shadow-peach-red-50"
           >
             <img
               src={article.img}
@@ -131,7 +132,7 @@ export default function BlogListCard({ maxPosts }) {
                 </span>
               </div>
             </div>
-          </div>
+          </Link>
         ))}
         {/* looping to retrieve data end */}
       </div>
