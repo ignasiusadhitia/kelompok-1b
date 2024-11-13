@@ -8,7 +8,7 @@ const Navbar = () => {
 
   const handleMenuClick = (menu) => {
     setMenuActive(menu);
-    setIsMenuOpen(false); // Menutup menu setelah klik di layar mobile
+    setIsMenuOpen(false);
   };
 
   return (
