@@ -37,7 +37,7 @@ const QuoteCard = () => {
           </div>
 
           
-          <button onClick={() => handleNavigation("/contact")} className="relative z-10 bg-peach-red-100 text-white px-4 py-2 rounded-md mt-4">
+          <button onClick={() => handleNavigation("/contact")} className="relative z-10 bg-peach-red-100 text-white px-4 py-2 rounded-md mt-4 hover:bg-red-600">
             Get In Touch
           </button>
         </div>
