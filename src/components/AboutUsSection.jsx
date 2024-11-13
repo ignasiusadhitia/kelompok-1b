@@ -1,8 +1,8 @@
 import React from "react";
-import Typography from "./Typography";
-import MaskGroup from "../assets/AssetsAboutPages/MaskGroup.png";
+import { useNavigate } from "react-router-dom";
 import Icon from "../assets/AssetsAboutPages/Icon.svg";
-import { Link, useNavigate } from "react-router-dom";
+import MaskGroup from "../assets/AssetsAboutPages/MaskGroup.png";
+import Typography from "./Typography";
 
 export default function AboutUsSection() {
   const navigate = useNavigate();
@@ -55,7 +55,7 @@ export default function AboutUsSection() {
 
             <div
               onClick={() => handleNavigation("/contact")}
-              className="flex bg-[#ffffff] gap-5 px-3 py-2 rounded-[10px] mt-4 cursor-pointer"
+              className="flex bg-[#ffffff] gap-5 px-3 py-2 rounded-[10px] mt-4 cursor-pointer hover:bg-peach-red-10"
             >
               <div className="bg-off-white px-3 py-2 rounded-[10px] flex items-center">
                 <img src={Icon} className="w-[25px]" />

@@ -26,7 +26,7 @@ const HeroSection = () => {
         </Typography>
 
         
-          <button onClick={() => handleNavigation("/about")} className="bg-peach-red-100 text-white py-[10px] px-[20px] rounded-md w-fit">
+          <button onClick={() => handleNavigation("/about")} className="bg-peach-red-100 text-white py-[10px] px-[20px] rounded-md w-fit hover:bg-red-600">
             View More
           </button>
         

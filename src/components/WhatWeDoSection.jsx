@@ -3,14 +3,19 @@ import visionIcon from "../assets/what-we-do-1.png";
 import goalIcon from "../assets/what-we-do-2.png";
 import heroImg from "../assets/what-we-do-hero.png";
 import Typography from "./Typography";
+import PropTypes from "prop-types";
 
-const WhatWeDoSection = () => {
+const WhatWeDoSection = ({ showButton }) => {
   return (
     <section className="bg-off-white">
       <div className="container grid grid-cols-1 lg:grid-cols-2 gap-10 py-20 mx-auto px-4">
         {/* image */}
         <div>
-          <img src={heroImg} alt="what We Do" className="w-full" />
+          <img
+            src={heroImg}
+            alt="what We Do"
+            className="w-full h-full object-cover rounded-lg"
+          />
         </div>
         {/* image end */}
 
@@ -68,7 +73,7 @@ const WhatWeDoSection = () => {
               </div>
             </div>
 
-            <div className="flex bg-[#ffffff] gap-5 px-3 py-2 rounded-[10px] mt-5">
+            <div className="flex bg-[#ffffff] gap-5 px-3 py-2 rounded-[10px] mt-0 md:mt-5">
               <div className="p-3.5 bg-peach-red-10 rounded-[10px] w-fit">
                 <img src={goalIcon} alt="icon" className="w-12 " />
               </div>
@@ -87,10 +92,19 @@ const WhatWeDoSection = () => {
               </div>
             </div>
           </div>
+          {showButton && (
+            <button className="bg-peach-red-100 hover:bg-red-600 text-white py-[10px] px-[20px] mt-[30px] rounded-md w-fit">
+              View More
+            </button>
+          )}
         </div>
       </div>
     </section>
   );
+};
+
+WhatWeDoSection.propTypes = {
+  showButton: PropTypes.bool,
 };
 
 export default WhatWeDoSection;
