@@ -1,43 +1,53 @@
 import React from "react";
-import designIcon from "../assets/design.png";
-import developIcon from "../assets/develop.png";
-import researchIcon from "../assets/research.png";
-import testIcon from "../assets/test.png";
-import OurProcessCard from "./OurProcessCard";
 import Typography from "./Typography";
+import OurProcessCard from "./OurProcessCard";
+import webDesignIcon from "../assets/our-expertise-1.png";
+import uiUxIcon from "../assets/our-expertise-2.png";
+import migrationIcon from "../assets/our-expertise-3.png";
+import appDevIcon from "../assets/our-expertise-4.png";
+import integrationIcon from "../assets/our-expertise-5.png";
+import emailMarketingIcon from "../assets/our-expertise-6.png";
 
 const data = [
   {
-    title: "Research",
+    title: "Web Design/Development",
     description:
       "It is a long established fact that a reader will be distracted by the readable content of a page.",
-    icon: researchIcon,
-    index: "01",
+    icon: webDesignIcon,
   },
   {
-    title: "Design",
+    title: "UI/UX Design",
     description:
       "It is a long established fact that a reader will be distracted by the readable content of a page.",
-    icon: designIcon,
-    index: "02",
+    icon: uiUxIcon,
   },
   {
-    title: "Develop",
+    title: "Website Migration",
     description:
       "It is a long established fact that a reader will be distracted by the readable content of a page.",
-    icon: developIcon,
-    index: "03",
+    icon: migrationIcon,
   },
   {
-    title: "Test",
+    title: "App Development",
     description:
       "It is a long established fact that a reader will be distracted by the readable content of a page.",
-    icon: testIcon,
-    index: "04",
+    icon: appDevIcon,
+  },
+  {
+    title: "Hubspot Integration",
+    description:
+      "It is a long established fact that a reader will be distracted by the readable content of a page.",
+    icon: integrationIcon,
+  },
+  {
+    title: "Email Marketing",
+    description:
+      "It is a long established fact that a reader will be distracted by the readable content of a page.",
+    icon: emailMarketingIcon,
   },
 ];
 
-const OurProcessCardSection = () => {
+const OurExperticeCardSection = () => {
   return (
     <section className="container mx-auto py-[100px]">
       <div className="flex justify-center">
@@ -45,20 +55,19 @@ const OurProcessCardSection = () => {
           variant="strong"
           className="text-center text-peach-red-100 mb-2.5 "
         >
-          \ Planning \
+          \ Services \
         </Typography>
       </div>
       <Typography variant="h2" className="text-center text-dark-blue-100 mb-10">
-        Our Process
+        Our Expertice
       </Typography>
-      <div className="grid grid-cols-4 gap-7">
+      <div className="grid grid-cols-3 gap-7">
         {data.map((item) => (
           <OurProcessCard
             key={item.index}
             title={item.title}
             description={item.description}
             icon={item.icon}
-            index={item.index}
           />
         ))}
       </div>
@@ -66,4 +75,4 @@ const OurProcessCardSection = () => {
   );
 };
 
-export default OurProcessCardSection;
+export default OurExperticeCardSection;
