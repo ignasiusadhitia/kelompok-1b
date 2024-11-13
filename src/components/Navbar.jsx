@@ -119,6 +119,7 @@ const Navbar = () => {
               </Link>
             </li>
           </ul>
+
           <Link
             to="/"
             className="bg-peach-red-100 hover:bg-red-700 text-white font-bold py-2 px-4 rounded"
