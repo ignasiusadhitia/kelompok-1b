@@ -1,8 +1,8 @@
 import React from "react";
-import Typography from "./Typography";
-import MaskGroup from "../assets/AssetsAboutPages/MaskGroup.png";
+import { useNavigate } from "react-router-dom";
 import Icon from "../assets/AssetsAboutPages/Icon.svg";
-import { Link, useNavigate } from "react-router-dom";
+import MaskGroup from "../assets/AssetsAboutPages/MaskGroup.png";
+import Typography from "./Typography";
 
 export default function AboutUsSection() {
   const navigate = useNavigate();
