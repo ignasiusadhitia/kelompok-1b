@@ -11,7 +11,7 @@ const TestimonialCard = ({
   clientRole = "CEO",
 }) => {
   return (
-    <div className="bg-dark-blue-10 rounded-md p-[30px] mx-auto w-screen md:max-w-[750px]">
+    <div className="bg-dark-blue-10 rounded-md p-[30px] mx-auto w-screen md:max-w-[750px] mb-12">
       <div className="flex justify-between items-center">
         <img src={clientImg} alt="" />
         <img src={quote} alt="" className="w-[60px] h-[60px]" />

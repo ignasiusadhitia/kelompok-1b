@@ -1,20 +1,49 @@
 import React, { useState } from "react";
 import TestimonialCard from "./TestimonialCard";
 import Typography from "./Typography";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/pagination";
+import { Pagination } from "swiper/modules";
+import client1Img from "../assets/client-1.png";
+import client2Img from "../assets/client-2.png";
+
+const testimonials = [
+  {
+    clientImg: client1Img,
+    testimony:
+      "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed.",
+    clientName: "Samual Karl",
+    clientRole: "CEO",
+  },
+  {
+    clientImg: client1Img,
+    testimony:
+      "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed.",
+    clientName: "Samual Karl",
+    clientRole: "CEO",
+  },
+  {
+    clientImg: client2Img,
+    testimony:
+      "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed.",
+    clientName: "Daria Linney",
+    clientRole: "CEO",
+  },
+  {
+    clientImg: client2Img,
+    testimony:
+      "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed.",
+    clientName: "Daria Linney",
+    clientRole: "CEO",
+  },
+];
 
 const TestimonialCardSection = () => {
-  // Set initial state to 1 (middle card)
-  const [currentIndex, setCurrentIndex] = useState(1);
+  const [activeIndex, setActiveIndex] = useState(1);
 
-  const testimonials = [
-    <TestimonialCard key={0} />,
-    <TestimonialCard key={1} />,
-    <TestimonialCard key={2} />,
-  ];
-
-  // Handle dot click to move cards
-  const handleDotClick = (index) => {
-    setCurrentIndex(index);
+  const handleSlideChange = (swiper) => {
+    setActiveIndex(swiper.realIndex);
   };
 
   return (
@@ -29,42 +58,48 @@ const TestimonialCardSection = () => {
         Testimonials
       </Typography>
 
-      <div className="w-full flex flex-col items-center">
-        <div className="w-screen overflow-hidden flex justify-center">
-          <div className="flex transition-transform duration-500 ease-in-out gap-7">
-            {testimonials.map((card, index) => (
-              <div
-                key={index}
-                className="transition-transform duration-500 ease-in-out px-4"
-                style={{
-                  width: "750px", // Width of each card
-                }}
-              >
-                {card}
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* Navigation Dots */}
-        <div className="flex mt-4 space-x-2">
-          {/* Left Indicator */}
-          <button
-            onClick={() => handleDotClick(0)} // Set to the first card
-            className={`w-3 h-3 rounded-full ${currentIndex === 0 ? "bg-peach-red-100" : "bg-white border border-peach-red-100"}`}
-          ></button>
-          {/* Middle Indicator */}
-          <button
-            onClick={() => handleDotClick(1)} // Set to the middle card
-            className={`w-3 h-3 rounded-full ${currentIndex === 1 ? "bg-peach-red-100" : "bg-white border border-peach-red-100"}`}
-          ></button>
-          {/* Right Indicator */}
-          <button
-            onClick={() => handleDotClick(2)} // Set to the last card
-            className={`w-3 h-3 rounded-full ${currentIndex === 2 ? "bg-peach-red-100" : "bg-white border border-peach-red-100"}`}
-          ></button>
-        </div>
-      </div>
+      <Swiper
+        modules={[Pagination]}
+        spaceBetween={30}
+        slidesPerView={2.05}
+        centeredSlides={true}
+        pagination={{ clickable: true }}
+        initialSlide={1}
+        loop
+        onSlideChange={handleSlideChange}
+        breakpoints={{
+          0: {
+            slidesPerView: 1,
+            spaceBetween: 10,
+          },
+          640: {
+            slidesPerView: 1,
+            spaceBetween: 20,
+          },
+          1024: {
+            slidesPerView: 2.05,
+            spaceBetween: 30,
+          },
+        }}
+        className="w-full swiper-cstm"
+      >
+        {testimonials.map((item, index) => (
+          <SwiperSlide key={index}>
+            <div
+              className={`transition-all duration-500 ${
+                activeIndex === index ? "scale-100 blur-0" : "scale-90 blur-sm"
+              }`}
+            >
+              <TestimonialCard
+                clientImg={item.clientImg}
+                testimony={item.testimony}
+                clientName={item.clientName}
+                clientRole={item.clientRole}
+              />
+            </div>
+          </SwiperSlide>
+        ))}
+      </Swiper>
     </section>
   );
 };
