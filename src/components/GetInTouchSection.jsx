@@ -3,9 +3,8 @@ import Typography from "./Typography";
 import emailIcon from "../assets/AssetContactPages/email-icon.png";
 import phoneIcon from "../assets/AssetContactPages/phone-icon.png";
 import locationIcon from "../assets/AssetContactPages/location-icon.png";
-import PropTypes from "prop-types";
 
-const GetInTouchSection = ({ titleColor = "text-darkblue-100" }) => {
+const GetInTouchSection = () => {
   return (
     <div className="min-h-screen py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-6xl mx-auto">
@@ -18,7 +17,7 @@ const GetInTouchSection = ({ titleColor = "text-darkblue-100" }) => {
           </Typography>
           <Typography
             variant="h2"
-            className={`text-center ${titleColor} mb-10`}
+            className="text-center text-dark-blue-100 mb-10"
           >
             Hey! Let&apos;s Talk
           </Typography>
@@ -64,7 +63,7 @@ const GetInTouchSection = ({ titleColor = "text-darkblue-100" }) => {
               </div>
             </form>
           </div>
-          <div className="bg-white space-y-8 p-8">
+          <div className="bg-white space-y-8 p-8 rounded-lg">
             <div className="flex items-start space-x-4">
               <div className="bg-red-100 p-3 rounded-lg">
                 <img src={phoneIcon} alt="email icon" className="w-6" />
@@ -162,10 +161,6 @@ const GetInTouchSection = ({ titleColor = "text-darkblue-100" }) => {
       </div>
     </div>
   );
-};
-
-GetInTouchSection.propTypes = {
-  titleColor: PropTypes.string,
 };
 
 export default GetInTouchSection;

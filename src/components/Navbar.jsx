@@ -8,12 +8,12 @@ const Navbar = () => {
 
   const handleMenuClick = (menu) => {
     setMenuActive(menu);
-    setIsMenuOpen(false);
+    setIsMenuOpen(false); // Menutup menu setelah klik di layar mobile
   };
 
   return (
     <header className="py-4 bg-white">
-      <div className="container mx-auto md:flex md:justify-between items-center">
+      <div className="container mx-auto md:flex md:justify-between items-center px-6 md:px-8">
         <div className="flex justify-between items-center">
           {/* Logo */}
           <Link
@@ -119,12 +119,13 @@ const Navbar = () => {
               </Link>
             </li>
           </ul>
-          <a
-            href="#"
-            className="bg-peach-red-100 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-md"
+
+          <Link
+            to="/"
+            className="bg-peach-red-100 hover:bg-red-700 text-white font-bold py-2 px-4 rounded"
           >
             Get in Touch
-          </a>
+          </Link>
         </nav>
       </div>
     </header>
