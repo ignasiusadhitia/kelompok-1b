@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import Typography from "../components/Typography";
 
 export default function BannerSection({ title, breadCrumb }) {
@@ -21,3 +22,8 @@ export default function BannerSection({ title, breadCrumb }) {
     </div>
   );
 }
+
+BannerSection.propTypes = {
+  title: PropTypes.string.isRequired,
+  breadCrumb: PropTypes.string.isRequired,
+};
