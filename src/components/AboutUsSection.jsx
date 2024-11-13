@@ -4,26 +4,6 @@ import MaskGroup from "../assets/AssetsAboutPages/MaskGroup.png";
 import Icon from "../assets/AssetsAboutPages/Icon.svg";
 export default function AboutUsSection() {
   return (
-<<<<<<< HEAD
-    <section className="bg-off-white ">
-      <div className="container grid grid-cols-2 gap-10 py-20 mx-auto">
-        {/* image */}
-        <div>
-          <img src={MaskGroup} alt="About Us" className="w-full" />
-        </div>
-        {/* image end */}
-
-        <div>
-          {/* tagline */}
-          <Typography
-            variant="strong"
-            color="text-peach-red-100"
-            className="mb-2 font-bold"
-          >
-            \About Us\
-          </Typography>
-          {/* tagline end */}
-=======
     <section className="bg-off-white">
       <div className="container mx-auto">
         <div className="flex py-20">
@@ -43,7 +23,6 @@ export default function AboutUsSection() {
               \About Us\
             </Typography>
             {/* tagline end */}
->>>>>>> df5c8f1b3514d08089337fdce5f8a0623cac2161
 
             {/* title */}
             <Typography
@@ -64,17 +43,10 @@ export default function AboutUsSection() {
             </Typography>
             {/* description end */}
 
-<<<<<<< HEAD
-          <div className="flex bg-[#ffffff] gap-5 px-3 py-2 rounded-[10px] mt-7">
-            <div className="bg-off-white px-3 py-2 rounded-[10px] ">
-              <img src={Icon} className="w-[25px]" />
-            </div>
-=======
             <div className="flex bg-[#ffffff] gap-5 px-3 py-2 rounded-[10px] mt-7">
               <div className="bg-off-white px-3 py-2 rounded-[10px] ">
                 <img src={Icon} className="w-[25px]" />
               </div>
->>>>>>> df5c8f1b3514d08089337fdce5f8a0623cac2161
 
               {/* contact */}
               <div className="">

@@ -70,11 +70,7 @@ function TeamSection() {
       </div>
 
       {/* Looping to retrieve data */}
-<<<<<<< HEAD
-      <div className="grid grid-cols-4 gap-10">
-=======
       <div className="grid grid-cols-4 gap-10 container mx-auto">
->>>>>>> df5c8f1b3514d08089337fdce5f8a0623cac2161
         {teamMembers.map((member, index) => (
           <div className="text-center" key={index}>
             <img src={member.image} alt={member.name} className="mb-5" />
