@@ -4,6 +4,7 @@ import Person1 from "../assets/AssetsAboutPages/Person1.png";
 import Person2 from "../assets/AssetsAboutPages/Person2.png";
 import Person3 from "../assets/AssetsAboutPages/Person3.png";
 import Person4 from "../assets/AssetsAboutPages/Person4.png";
+import PropTypes from "prop-types";
 
 // data object
 const teamMembers = [
@@ -49,7 +50,12 @@ const teamMembers = [
   },
 ];
 // data object end
-function TeamSection() {
+function TeamSection({ maxMembers }) {
+  // Display team members based on maxMembers
+  const displayedMembers = maxMembers
+    ? teamMembers.slice(0, maxMembers)
+    : teamMembers;
+
   return (
     <section className="container mx-auto">
       <div className="flex flex-col text-center mt-10 mb-10">
@@ -71,7 +77,7 @@ function TeamSection() {
 
       {/* Looping to retrieve data */}
       <div className="grid grid-cols-4 gap-10">
-        {teamMembers.map((member, index) => (
+        {displayedMembers.map((member, index) => (
           <div className="text-center" key={index}>
             <img src={member.image} alt={member.name} />
             <Typography
@@ -91,5 +97,9 @@ function TeamSection() {
     </section>
   );
 }
+
+TeamSection.propTypes = {
+  maxMembers: PropTypes.number,
+};
 
 export default TeamSection;
