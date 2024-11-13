@@ -49,7 +49,7 @@ const data = [
 
 const OurExperticeCardSection = () => {
   return (
-    <section className="container mx-auto py-[100px]">
+    <section className="container mx-auto py-[100px] px-4">
       <div className="flex justify-center">
         <Typography
           variant="strong"
@@ -61,7 +61,7 @@ const OurExperticeCardSection = () => {
       <Typography variant="h2" className="text-center text-dark-blue-100 mb-10">
         Our Expertice
       </Typography>
-      <div className="grid grid-cols-3 gap-7">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-7">
         {data.map((item, index) => (
           <OurProcessCard
             key={index}

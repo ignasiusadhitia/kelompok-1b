@@ -4,7 +4,7 @@ import Typography from "./Typography";
 
 const HeroSection = () => {
   return (
-    <div className="container grid grid-cols-2 mx-auto py-[50px]">
+    <div className="container grid grid-cols-1 md:grid-cols-2 mx-auto py-[50px] px-4">
       <div className="flex flex-col justify-center mr-2">
         <Typography variant="h3" className="text-peach-red-100 mb-2.5">
           \ We Are Here \
@@ -20,7 +20,7 @@ const HeroSection = () => {
           View More
         </button>
       </div>
-      <img src={heroImage} alt="" />
+      <img src={heroImage} alt="hero-image" className="mt-8 md:mt-0" />
     </div>
   );
 };

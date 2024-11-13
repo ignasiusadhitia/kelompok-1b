@@ -5,15 +5,15 @@ import Icon from "../assets/AssetsAboutPages/Icon.svg";
 export default function AboutUsSection() {
   return (
     <section className="bg-off-white">
-      <div className="container mx-auto">
-        <div className="flex py-20">
+      <div className="container mx-auto px-4">
+        <div className="flex flex-col md:flex-row py-20">
           {/* image */}
           <div className="">
             <img src={MaskGroup} alt="About Us" className="w-[40rem]" />
           </div>
           {/* image end */}
 
-          <div className="ps-10">
+          <div className="ps-10 mt-8 md:mt-0">
             {/* tagline */}
             <Typography
               variant="strong"

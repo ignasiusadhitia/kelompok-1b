@@ -6,8 +6,8 @@ import Typography from "./Typography";
 
 const WhatWeDoSection = () => {
   return (
-    <section className="bg-off-white ">
-      <div className="container grid grid-cols-1 lg:grid-cols-2 gap-10 py-20 mx-auto">
+    <section className="bg-off-white">
+      <div className="container grid grid-cols-1 lg:grid-cols-2 gap-10 py-20 mx-auto px-4">
         {/* image */}
         <div>
           <img src={heroImg} alt="what We Do" className="w-full" />

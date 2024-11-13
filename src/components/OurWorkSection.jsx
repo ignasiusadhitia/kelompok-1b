@@ -24,7 +24,7 @@ const OurWorkSection = () => {
       : imageData.filter((image) => image.category === selectedCategory);
 
   return (
-    <section className="container mx-auto py-[100px]">
+    <section className="container mx-auto py-[100px] px-4">
       <Typography
         variant="h3"
         className="text-center text-peach-red-100 mb-2.5"
@@ -35,7 +35,7 @@ const OurWorkSection = () => {
         Our Work
       </Typography>
 
-      <div className="flex justify-center mb-10">
+      <div className="flex justify-center flex-wrap mb-10">
         {["ALL", "LIFE", "MOMENTS", "NATURE", "STORIES", "TRAVEL"].map(
           (category) => (
             <button
@@ -66,24 +66,24 @@ const OurWorkSection = () => {
         )}
       </div>
 
-      <div className="flex gap-7 h-[416px]">
+      <div className="flex flex-wrap md:flex-nowrap gap-7 h-auto md:h-[416px]">
         {filteredImages.slice(0, 2).map((image, index) => (
           <img
             key={index}
             src={image.src}
             alt={`work-${index}`}
-            className="h-full"
+            className="w-full h-auto md:h-full md:w-auto"
           />
         ))}
       </div>
 
-      <div className="flex gap-7 mt-7 h-[416px]">
+      <div className="flex flex-wrap  md:flex-nowrap gap-7 mt-7 h-auto md:h-[416px]">
         {filteredImages.slice(2).map((image, index) => (
           <img
             key={index}
             src={image.src}
             alt={`work-${index}`}
-            className="h-full"
+            className="w-full h-auto md:h-full md:w-auto"
           />
         ))}
       </div>
