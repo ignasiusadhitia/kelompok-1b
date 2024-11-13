@@ -108,7 +108,7 @@ const GetInTouchSection = () => {
               <div className="flex space-x-4">
                 <a
                   href="#"
-                  className="bg-peach-red-100 p-3 rounded-lg text-white hover:bg-red-600 transition-colors"
+                  className="bg-peach-red-100 p-3 rounded-md text-white hover:bg-red-600 transition-colors"
                 >
                   <svg
                     className="w-6 h-6"
@@ -120,7 +120,7 @@ const GetInTouchSection = () => {
                 </a>
                 <a
                   href="#"
-                  className="bg-peach-red-100 p-3 rounded-lg text-white hover:bg-red-600 transition-colors"
+                  className="bg-peach-red-100 p-3 rounded-md text-white hover:bg-red-600 transition-colors"
                 >
                   <svg
                     className="w-6 h-6"
@@ -132,7 +132,7 @@ const GetInTouchSection = () => {
                 </a>
                 <a
                   href="#"
-                  className="bg-peach-red-100 p-3 rounded-lg text-white hover:bg-red-600 transition-colors"
+                  className="bg-peach-red-100 p-3 rounded-md text-white hover:bg-red-600 transition-colors"
                 >
                   <svg
                     className="w-6 h-6"
@@ -144,7 +144,7 @@ const GetInTouchSection = () => {
                 </a>
                 <a
                   href="#"
-                  className="bg-peach-red-100 p-3 rounded-lg text-white hover:bg-red-600 transition-colors"
+                  className="bg-peach-red-100 p-3 rounded-md text-white hover:bg-red-600 transition-colors"
                 >
                   <svg
                     className="w-6 h-6"

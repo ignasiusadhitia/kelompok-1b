@@ -16,9 +16,9 @@ const Home = () => {
       <HeroSection />
       <AboutUsSection />
       <OurProcessCardSection />
-      <WhatWeDoSection />
+      <WhatWeDoSection showButton />
       <OurExperticeCardSection />
-      <div className="bg-dark-blue-10 pt-10 pb-20">
+      <div className="bg-off-white pt-10 pb-20">
         <TeamSection maxMembers={4} />
       </div>
       <TestimonialCardSection />

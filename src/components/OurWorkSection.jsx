@@ -89,7 +89,7 @@ const OurWorkSection = () => {
       </div>
 
       <div className="flex justify-center mt-12">
-        <button className="rounded-md bg-peach-red-100 px-[18px] py-[9px]">
+        <button className="rounded-md bg-peach-red-100 px-[18px] py-[9px] hover:bg-red-600">
           <Typography color="text-white">Get In Touch</Typography>
         </button>
       </div>

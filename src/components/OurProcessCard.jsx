@@ -11,7 +11,7 @@ const OurProcessCard = ({
   index = "",
 }) => {
   return (
-    <div className="flex flex-col gap-5 relative rounded-md bg-dark-blue-10 p-7">
+    <div className="flex flex-col gap-5 relative rounded-md bg-off-white p-7 shadow-md hover:shadow-peach-red-50 hover:cursor-pointer">
       <Typography className="text-dark-blue-25 text-[48px] font-[800] leading-[50px] absolute top-[-5px] right-2.5 ">
         {index && index}
       </Typography>

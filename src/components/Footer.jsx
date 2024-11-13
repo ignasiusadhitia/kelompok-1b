@@ -1,13 +1,22 @@
 import React from "react";
-import instagramIcon from "../assets/instagram-icon.png";
-import facebookIcon from "../assets/facebook-icon.png";
-import twitterIcon from "../assets/twitter-icon.png";
-import linkedinIcon from "../assets/linkedin-icon.png";
+import instagramIcon from "../assets/AssetFooterPages/instagram-icon.png";  
+import facebookIcon from "../assets/AssetFooterPages/facebook-icon.png";
+import twitterIcon from "../assets/AssetFooterPages/twitter-icon.png";
+import linkedinIcon from "../assets/AssetFooterPages/linkedin-icon.png";
 import reactIcon from "../assets/react-icon.png";
 import wordpressIcon from "../assets/wordpress-icon.png";
 import wixIcon from "../assets/wix-icon.png";
+import { useNavigate } from "react-router-dom";
 
 const Footer = () => {
+    const navigate = useNavigate();
+  
+  // Function to handle navigation
+    const handleNavigation = (path) => {
+      navigate(path);
+      window.scrollTo(0, 0);
+    };
+
   return (
     <footer className="bg-dark-blue-100 text-white py-10 md:py-16">
       <div className="container mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-8">
@@ -19,32 +28,32 @@ const Footer = () => {
             the readable content of a page when looking at
           </p>
           <div className="flex space-x-4">
-            <a href="#" className="text-white hover:text-red-500">
+            <a href="#" className="bg-white rounded-lg p-2 hover:bg-red-200">
               <img
                 src={linkedinIcon}
                 alt="linkedin-icon"
-                className="w-10 h-10"
+                className="w-5 h-5"
               />
             </a>
-            <a href="#" className="text-white hover:text-red-500">
+            <a href="#" className="bg-white rounded-lg p-2 hover:bg-red-200">
               <img
                 src={instagramIcon}
                 alt="linkedin-icon"
-                className="w-10 h-10"
+                className="w-5 h-5"
               />
             </a>
-            <a href="#" className="text-white hover:text-red-500">
+            <a href="#" className="bg-white rounded-lg p-2 hover:bg-red-200">
               <img
                 src={facebookIcon}
                 alt="linkedin-icon"
-                className="w-10 h-10"
+                className="w-5 h-5"
               />
             </a>
-            <a href="#" className="text-white hover:text-red-500">
+            <a href="#" className="bg-white rounded-lg p-2 hover:bg-red-200">
               <img
                 src={twitterIcon}
                 alt="linkedin-icon"
-                className="w-10 h-10"
+                className="w-5 h-5"
               />
             </a>
           </div>
@@ -54,34 +63,34 @@ const Footer = () => {
           <hr className="border-2 border-peach-red-100 w-10" />
           <ul className="space-y-2 pt-4">
             <li>
-              <a href="#" className="text-white hover:text-red-500">
+              <span onClick={() => handleNavigation("/our-services")} className="text-white hover:text-red-500 cursor-pointer">
                 Web Design/Development
-              </a>
+              </span>
             </li>
             <li>
-              <a href="#" className="text-white hover:text-red-500">
+              <span onClick={() => handleNavigation("/our-services")} className="text-white hover:text-red-500 cursor-pointer">
                 App Development
-              </a>
+              </span>
             </li>
             <li>
-              <a href="#" className="text-white hover:text-red-500">
+              <span onClick={() => handleNavigation("/our-services")} className="text-white hover:text-red-500 cursor-pointer">
                 UI/UX Design
-              </a>
+              </span>
             </li>
             <li>
-              <a href="#" className="text-white hover:text-red-500">
+              <span onClick={() => handleNavigation("/our-services")} className="text-white hover:text-red-500 cursor-pointer">
                 HubSpot Integration
-              </a>
+              </span>
             </li>
             <li>
-              <a href="#" className="text-white hover:text-red-500">
+              <span onClick={() => handleNavigation("/our-services")} className="text-white hover:text-red-500 cursor-pointer">
                 Email Marketing
-              </a>
+              </span>
             </li>
             <li>
-              <a href="#" className="text-white hover:text-red-500">
+              <span onClick={() => handleNavigation("/our-services")} className="text-white hover:text-red-500 cursor-pointer">
                 Website Migration
-              </a>
+              </span>
             </li>
           </ul>
         </div>
@@ -145,7 +154,7 @@ const Footer = () => {
             <input
               type="email"
               placeholder="Email"
-              className="flex-1 bg-white text-gray-700 px-4 py-2 rounded-md focus:outline-none w-full"
+              className="flex-1 bg-white text-gray-700 px-4 py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-peach-red-100 w-full"
             />
             <div className="flex justify-end mt-4">
               <button className="bg-peach-red-100 text-white px-4 py-2 rounded-md hover:bg-red-600 focus:outline-none">

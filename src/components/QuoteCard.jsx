@@ -1,8 +1,17 @@
 import React from "react";
 import Typography from "./Typography";
 import quote from "../assets/quote.jpg";
+import { useNavigate } from "react-router-dom";
 
 const QuoteCard = () => {
+  const navigate = useNavigate();
+  
+  // Function to handle navigation
+    const handleNavigation = (path) => {
+      navigate(path);
+      window.scrollTo(0, 0);
+  };
+  
   return (
     <div className="py-16">
       <div className="container mx-auto px-4 w-full md:w-3/4">
@@ -26,7 +35,9 @@ const QuoteCard = () => {
               we are Catching up through Video"
             </Typography>
           </div>
-          <button className="relative z-10 bg-peach-red-100 text-white px-4 py-2 rounded-md mt-4">
+
+          
+          <button onClick={() => handleNavigation("/contact")} className="relative z-10 bg-peach-red-100 text-white px-4 py-2 rounded-md mt-4 hover:bg-red-600">
             Get In Touch
           </button>
         </div>
