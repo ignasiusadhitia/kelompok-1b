@@ -10,7 +10,9 @@ const Home = () => {
       <HeroSection />
       <AboutUsSection />
       <OurProcessCardSection />
-      <TeamSection maxMembers={4} />
+      <div className="bg-dark-blue-10 pt-10 pb-20">
+        <TeamSection maxMembers={4} />
+      </div>
     </div>
   );
 };
