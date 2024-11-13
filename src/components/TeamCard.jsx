@@ -76,13 +76,9 @@ function TeamSection({ maxMembers }) {
       </div>
 
       {/* Looping to retrieve data */}
-<<<<<<< HEAD
-      <div className="grid grid-cols-4 gap-10 container mx-auto">
-        {teamMembers.map((member, index) => (
-=======
+
       <div className="grid grid-cols-4 gap-10">
         {displayedMembers.map((member, index) => (
->>>>>>> e805f686783a8bd8a57cf479be005d3d0ea42ee3
           <div className="text-center" key={index}>
             <img src={member.image} alt={member.name} className="mb-5" />
             <Typography
