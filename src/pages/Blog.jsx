@@ -5,6 +5,7 @@ import BlogListCard from "../components/BlogListCard";
 const Blog = () => {
   return (
     <>
+      {/* send props for change title and bread crumb */}
       <BannerSection title="Blogs" breadCrumb="Home / Blogs"  />
       <LatestPostSection />
       <BlogListCard />
