@@ -15,12 +15,12 @@ const teamMembers = [
   {
     name: "Meghan J. Webb",
     role: "CTO",
-    image: Person2 ,
+    image: Person2,
   },
   {
     name: "Yvonne J. Cullum",
     role: "CFO",
-    image: Person3 ,
+    image: Person3,
   },
   {
     name: "Diana H. Williams",
@@ -70,14 +70,14 @@ function TeamSection() {
       </div>
 
       {/* Looping to retrieve data */}
-      <div className="grid grid-cols-4 gap-10 px-40">
+      <div className="grid grid-cols-4 gap-10 container mx-auto">
         {teamMembers.map((member, index) => (
           <div className="text-center" key={index}>
-            <img src={member.image} alt={member.name} />
+            <img src={member.image} alt={member.name} className="mb-5" />
             <Typography
               variant="strong"
               color="text-peach-red-100"
-              className="font-bold mt-10"
+              className="font-bold"
             >
               {member.name}
             </Typography>

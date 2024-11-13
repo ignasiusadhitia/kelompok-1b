@@ -1,58 +1,110 @@
 import React from "react";
+import Article1 from "../assets/AssetsBlogPages/Article1.png";
+import Article2 from "../assets/AssetsBlogPages/Article2.png";
+import Article3 from "../assets/AssetsBlogPages/Article3.png";
+import Person1 from "../assets/AssetsBlogPages/Person1.png";
+import Person2 from "../assets/AssetsBlogPages/Person2.png";
+import Person3 from "../assets/AssetsBlogPages/Person3.png";
+import Typography from "./Typography";
 
 export default function LatestPostSection() {
   return (
-    <div className="grid grid-cols-2 gap-0.5">
-      <div className="row-span-2 flex items-center justify-center h-81 ">
-        <a href="" className="w-full h-full group overflow-hidden">
-          <img
-            src="https://images.tokopedia.net/img/KRMmCm/2024/3/21/007d8a06-a374-4d5f-8cd6-b35a2772d6b8.jpg"
-            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300 ease-in-out transform"
-            alt=""
-          />
-        </a>
-        <div className="bg-opacity-50 flex flex-col justify-end p-4 text-black">
-          <h3 className="text-lg font-semibold">
-            Persiapan IFW 2024? Tokopedia Fashion Market x Indonesia Fashion
-            Week Punya Kejutan Buat Kamu!
-          </h3>
-          <p className="text-xs mt-2">21 March 2024</p>
-        </div>
+    <div>
+      <div className="text-center pt-20">
+        {/* tagline */}
+        <Typography
+          variant="strong"
+          color="text-peach-red-100"
+          className="mb-2 font-bold"
+        >
+          \Our Blogs\
+        </Typography>
+        {/* tagline end */}
+
+        {/* title */}
+        <Typography
+          variant="h2"
+          color="text-dark-blue-100"
+          className="text-5xl mb-4 mt-4"
+        >
+          Latest Post
+        </Typography>
+        {/* title end */}
       </div>
 
-      <div>
-        <div className="relative row-span-2 flex items-center justify-center h-40">
-          <a href="" className="w-full h-full group overflow-hidden">
-            <img
-              src="https://images.tokopedia.net/img/KRMmCm/2023/8/21/0b782512-f8ff-49b4-8fc6-81364d662e4d.jpg"
-              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300 ease-in-out transform"
-              alt=""
-            />
-            <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-end p-4 text-white">
-              <h3 className="text-sm font-semibold">
-                Persiapan IFW 2024? Tokopedia Fashion Market x Indonesia Fashion
-                Week Punya Kejutan Buat Kamu!
-              </h3>
-              <p className="text-xs mt-2">21 March 2024</p>
-            </div>
+      <div className="grid grid-cols-2 gap-5 container mx-auto px-10">
+        {/* article 1 */}
+        <div className="flex row-span-2 flex-col h-fit rounded-lg shadow-md shadow-peach-red-25 justify-center p-5">
+          <a href="" className="w-full group overflow-hidden">
+            <img src={Article1} className="w-full object-cover" alt="" />
           </a>
+          <div className="flex flex-col text-black">
+            <p className="text-xs mt-2 font-bold text-gray-500">May 4th, 2022</p>
+            <h3 className="text-xl font-bold text-peach-red-100 mt-3">
+              The most Popular Business Of the Year
+            </h3>
+            <div className="flex flex-row justify-between items-center mt-3">
+              <div className="flex flex-row gap-3 items-center">
+                <img src={Person2} className />
+                <p className="font-bold text-sm">Ranold Jeff</p>
+              </div>
+              <span className="text-xs">2 Min Read</span>
+            </div>
+          </div>
         </div>
+        {/* article 1 end */}
 
-        <div className="relative row-span-2 flex items-center justify-center h-40">
-          <a href="" className="w-full h-full group overflow-hidden">
-            <img
-              src="https://images.tokopedia.net/img/KRMmCm/2023/7/24/c88c2aa0-528a-436f-b279-2bf3df8db674.jpg"
-              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300 ease-in-out transform"
-              alt=""
-            />
-            <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-end p-4 text-white">
-              <h3 className="text-sm font-semibold">
-                Persiapan IFW 2024? Tokopedia Fashion Market x Indonesia Fashion
-                Week Punya Kejutan Buat Kamu!
+        
+        {/* article 2 */}
+        <div className="flex flex-col gap-5">
+          <div className=" flex h-fit rounded-lg shadow-md shadow-peach-red-25 justify-center p-5">
+            <a href="" className="h-full">
+              <img
+                src={Article2}
+                className="h-full object-cover rounded-lg"
+                alt=""
+              />
+            </a>
+            <div className=" flex flex-col ps-4">
+              <p className="text-xs font-bold text-gray-500">Apr 27th, 2022</p>
+              <h3 className="text-xl font-bold text-peach-red-100 mt-5">
+                The most Popular Business Of the Year
               </h3>
-              <p className="text-xs mt-2">21 March 2024</p>
+              <div className="flex flex-row justify-between items-center mt-8">
+                <div className="flex flex-row gap-3 items-center">
+                  <img src={Person1} className />
+                  <p className="font-bold text-sm">Patricia Anderson</p>
+                </div>
+                <span className="text-xs">2 Min Read</span>
+              </div>
             </div>
-          </a>
+          </div>
+          {/* article 2 end */}
+
+          {/* article 3 */}
+          <div className="flex h-fit rounded-lg shadow-md shadow-peach-red-25 justify-center p-5">
+            <a href="" className="h-full">
+              <img
+                src={Article3}
+                className="h-full object-cover rounded-lg"
+                alt=""
+              />
+            </a>
+            <div className=" flex flex-col ps-4">
+              <p className="text-xs font-bold text-gray-500">Apr 27th, 2022</p>
+              <h3 className="text-xl font-bold text-peach-red-100 mt-5">
+                The most Popular Business Of the Year
+              </h3>
+              <div className="flex flex-row justify-between items-center mt-8">
+                <div className="flex flex-row gap-3 items-center">
+                  <img src={Person3} className />
+                  <p className="font-bold text-sm">Elaine Luna</p>
+                </div>
+                <span className="text-xs">2 Min Read</span>
+              </div>
+            </div>
+          </div>
+          {/* article 3 end */}
         </div>
       </div>
     </div>
