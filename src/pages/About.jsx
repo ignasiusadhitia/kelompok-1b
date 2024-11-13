@@ -8,7 +8,7 @@ const About = () => {
     <>
       <BannerSection title={"About Us"} breadCrumb={"Home / About Us"} />
       <AboutUsSection />
-      <TeamCard/>
+      <TeamCard />
     </>
   );
 };

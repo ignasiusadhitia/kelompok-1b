@@ -76,14 +76,15 @@ function TeamSection({ maxMembers }) {
       </div>
 
       {/* Looping to retrieve data */}
+
       <div className="grid grid-cols-4 gap-10">
         {displayedMembers.map((member, index) => (
           <div className="text-center" key={index}>
-            <img src={member.image} alt={member.name} />
+            <img src={member.image} alt={member.name} className="mb-5" />
             <Typography
               variant="strong"
               color="text-peach-red-100"
-              className="font-bold mt-10"
+              className="font-bold"
             >
               {member.name}
             </Typography>
