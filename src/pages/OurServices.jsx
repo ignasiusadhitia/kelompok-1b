@@ -1,7 +1,16 @@
-import React from 'react'
+import React from "react";
+import OurExperticeCardSection from "../components/OurExperticeCardSection";
+import WhatWeDoSection from "../components/WhatWeDoSection";
+import BannerSection from "../components/BannerSection";
 
 const OurServices = () => {
-  return <div>OurServices</div>
-}
+  return (
+    <div>
+      <BannerSection title={"Services"} breadCrumb={"Home / Services"} />
+      <WhatWeDoSection />
+      <OurExperticeCardSection />
+    </div>
+  );
+};
 
-export default OurServices
+export default OurServices;
