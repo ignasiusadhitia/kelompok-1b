@@ -5,15 +5,15 @@ import Icon from "../assets/AssetsAboutPages/Icon.svg";
 export default function AboutUsSection() {
   return (
     <section className="bg-off-white">
-      <div className="container mx-auto">
-        <div className="flex py-20">
+      <div className="container mx-auto px-4">
+        <div className="flex flex-col md:flex-row py-20">
           {/* image */}
           <div className="">
             <img src={MaskGroup} alt="About Us" className="w-[40rem]" />
           </div>
           {/* image end */}
 
-          <div className="ps-10">
+          <div className="ps-10 mt-8 md:mt-0">
             {/* tagline */}
             <Typography
               variant="strong"
@@ -35,7 +35,7 @@ export default function AboutUsSection() {
             {/* title end */}
 
             {/* description */}
-            <Typography variant="bodycopy" className="text-lg leading-7 mt-7">
+            <Typography variant="bodycopy" className="text-lg leading-6">
               It is a long established fact that a reader will be distracted by
               the <br /> readable content of a page when looking at its layout.
               The point of <br /> using Lorem Ipsum is that it has a
@@ -43,8 +43,8 @@ export default function AboutUsSection() {
             </Typography>
             {/* description end */}
 
-            <div className="flex bg-[#ffffff] gap-5 px-3 py-2 rounded-[10px] mt-7">
-              <div className="bg-off-white px-3 py-2 rounded-[10px] ">
+            <div className="flex bg-[#ffffff] gap-5 px-3 py-2 rounded-[10px] mt-4">
+              <div className="bg-off-white px-3 py-2 rounded-[10px] flex items-center">
                 <img src={Icon} className="w-[25px]" />
               </div>
 
@@ -53,11 +53,11 @@ export default function AboutUsSection() {
                 <Typography
                   variant="strong"
                   color="text-dark-blue-100"
-                  className="text-lg"
+                  className="text-[14px] md:text-lg"
                 >
                   Get Instant Professional Advice
                 </Typography>
-                <p>
+                <p className="text-sm md:text-sm">
                   Ready to Help:{" "}
                   <a
                     href="tel:+1356787897"

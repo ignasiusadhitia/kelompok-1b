@@ -57,7 +57,7 @@ function TeamSection({ maxMembers }) {
     : teamMembers;
 
   return (
-    <section className="container mx-auto">
+    <section className="container mx-auto px-4">
       <div className="flex flex-col text-center mt-10 mb-10">
         <Typography
           variant="strong"
@@ -77,10 +77,14 @@ function TeamSection({ maxMembers }) {
 
       {/* Looping to retrieve data */}
 
-      <div className="grid grid-cols-4 gap-10">
+      <div className="grid grid-cols-1 md:grid-cols-4 gap-10">
         {displayedMembers.map((member, index) => (
           <div className="text-center" key={index}>
-            <img src={member.image} alt={member.name} className="mb-5" />
+            <img
+              src={member.image}
+              alt={member.name}
+              className="mb-5 mx-auto"
+            />
             <Typography
               variant="strong"
               color="text-peach-red-100"

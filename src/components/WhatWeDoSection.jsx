@@ -6,8 +6,8 @@ import Typography from "./Typography";
 
 const WhatWeDoSection = () => {
   return (
-    <section className="bg-off-white ">
-      <div className="container grid grid-cols-1 lg:grid-cols-2 gap-10 py-20 mx-auto">
+    <section className="bg-off-white">
+      <div className="container grid grid-cols-1 lg:grid-cols-2 gap-10 py-20 mx-auto px-4">
         {/* image */}
         <div>
           <img src={heroImg} alt="what We Do" className="w-full" />
@@ -36,7 +36,7 @@ const WhatWeDoSection = () => {
           {/* title end */}
 
           {/* description */}
-          <Typography variant="bodycopy" className="text-lg leading-7 mt-7">
+          <Typography variant="bodycopy" className="text-lg leading-6">
             It is a long established fact that a reader will be distracted by
             the readable content of a page when looking at its layout. The point
             of using Lorem Ipsum is that it has a more-or-less normal
@@ -49,7 +49,7 @@ const WhatWeDoSection = () => {
           {/* description end */}
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-[30px]">
-            <div className="flex bg-[#ffffff] gap-5 px-3 py-2 rounded-[10px] mt-7">
+            <div className="flex bg-[#ffffff] gap-5 px-3 py-2 rounded-[10px] mt-5">
               <div className="p-3.5 bg-peach-red-10 rounded-[10px] w-fit">
                 <img src={visionIcon} alt="icon" className="w-12 " />
               </div>
@@ -68,7 +68,7 @@ const WhatWeDoSection = () => {
               </div>
             </div>
 
-            <div className="flex bg-[#ffffff] gap-5 px-3 py-2 rounded-[10px] mt-7">
+            <div className="flex bg-[#ffffff] gap-5 px-3 py-2 rounded-[10px] mt-5">
               <div className="p-3.5 bg-peach-red-10 rounded-[10px] w-fit">
                 <img src={goalIcon} alt="icon" className="w-12 " />
               </div>

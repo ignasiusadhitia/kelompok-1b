@@ -33,14 +33,16 @@ export default function LatestPostSection() {
         {/* title end */}
       </div>
 
-      <div className="grid grid-cols-2 gap-5 container mx-auto px-10">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-5 container mx-auto px-10">
         {/* article 1 */}
         <Link className="flex row-span-2 flex-col h-fit rounded-lg shadow-md shadow-peach-red-25 justify-center p-5 hover:shadow-peach-red-50">
           <div href="" className="w-full group overflow-hidden">
             <img src={Article1} className="w-full object-cover" alt="" />
           </div>
           <div className="flex flex-col text-black">
-            <p className="text-xs mt-2 font-bold text-gray-500">May 4th, 2022</p>
+            <p className="text-xs mt-2 font-bold text-gray-500">
+              May 4th, 2022
+            </p>
             <h3 className="text-xl font-bold text-peach-red-100 mt-3">
               The most Popular Business Of the Year
             </h3>
@@ -55,7 +57,6 @@ export default function LatestPostSection() {
         </Link>
         {/* article 1 end */}
 
-        
         {/* article 2 */}
         <div className="flex flex-col gap-5">
           <Link className=" flex h-fit rounded-lg shadow-md shadow-peach-red-25 justify-center p-5 hover:shadow-peach-red-50">
