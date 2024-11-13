@@ -27,7 +27,7 @@ const TestimonialCard = ({
         >
           {clientName}
         </Typography>
-        <Typography variant="smallcopy" color="text-dark-blue-100">
+        <Typography variant="bodycopy" color="text-dark-blue-100">
           {clientRole}
         </Typography>
       </div>
