@@ -4,6 +4,7 @@ import Person1 from "../assets/AssetsAboutPages/Person1.png";
 import Person2 from "../assets/AssetsAboutPages/Person2.png";
 import Person3 from "../assets/AssetsAboutPages/Person3.png";
 import Person4 from "../assets/AssetsAboutPages/Person4.png";
+import PropTypes from "prop-types";
 
 // data object
 const teamMembers = [
@@ -15,12 +16,12 @@ const teamMembers = [
   {
     name: "Meghan J. Webb",
     role: "CTO",
-    image: Person2 ,
+    image: Person2,
   },
   {
     name: "Yvonne J. Cullum",
     role: "CFO",
-    image: Person3 ,
+    image: Person3,
   },
   {
     name: "Diana H. Williams",
@@ -49,9 +50,14 @@ const teamMembers = [
   },
 ];
 // data object end
-function TeamSection() {
+function TeamSection({ maxMembers }) {
+  // Display team members based on maxMembers
+  const displayedMembers = maxMembers
+    ? teamMembers.slice(0, maxMembers)
+    : teamMembers;
+
   return (
-    <section className="">
+    <section className="container mx-auto">
       <div className="flex flex-col text-center mt-10 mb-10">
         <Typography
           variant="strong"
@@ -70,8 +76,8 @@ function TeamSection() {
       </div>
 
       {/* Looping to retrieve data */}
-      <div className="grid grid-cols-4 gap-10 px-40">
-        {teamMembers.map((member, index) => (
+      <div className="grid grid-cols-4 gap-10">
+        {displayedMembers.map((member, index) => (
           <div className="text-center" key={index}>
             <img src={member.image} alt={member.name} />
             <Typography
@@ -91,5 +97,9 @@ function TeamSection() {
     </section>
   );
 }
+
+TeamSection.propTypes = {
+  maxMembers: PropTypes.number,
+};
 
 export default TeamSection;
