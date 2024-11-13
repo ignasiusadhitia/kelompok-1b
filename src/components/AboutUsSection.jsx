@@ -2,7 +2,17 @@ import React from "react";
 import Typography from "./Typography";
 import MaskGroup from "../assets/AssetsAboutPages/MaskGroup.png";
 import Icon from "../assets/AssetsAboutPages/Icon.svg";
+import { Link, useNavigate } from "react-router-dom";
+
 export default function AboutUsSection() {
+  const navigate = useNavigate();
+
+  // Function to handle navigation
+  const handleNavigation = (path) => {
+    navigate(path);
+    window.scrollTo(0, 0);
+  };
+
   return (
     <section className="bg-off-white">
       <div className="container mx-auto px-4">
@@ -43,7 +53,10 @@ export default function AboutUsSection() {
             </Typography>
             {/* description end */}
 
-            <div className="flex bg-[#ffffff] gap-5 px-3 py-2 rounded-[10px] mt-4">
+            <div
+              onClick={() => handleNavigation("/contact")}
+              className="flex bg-[#ffffff] gap-5 px-3 py-2 rounded-[10px] mt-4 cursor-pointer"
+            >
               <div className="bg-off-white px-3 py-2 rounded-[10px] flex items-center">
                 <img src={Icon} className="w-[25px]" />
               </div>
@@ -59,12 +72,12 @@ export default function AboutUsSection() {
                 </Typography>
                 <p className="text-sm md:text-sm">
                   Ready to Help:{" "}
-                  <a
+                  <span
                     href="tel:+1356787897"
                     className="text-peach-red-100 font-semibold"
                   >
                     +1 356 678 7897
-                  </a>
+                  </span>
                 </p>
               </div>
               {/* contact end */}
