@@ -40,12 +40,14 @@ const data = [
 const OurProcessCardSection = () => {
   return (
     <section className="container mx-auto py-[100px]">
-      <Typography
-        variant="h3"
-        className="text-center text-peach-red-100 mb-2.5"
-      >
-        \ Planning \
-      </Typography>
+      <div className="flex justify-center">
+        <Typography
+          variant="strong"
+          className="text-center text-peach-red-100 mb-2.5 "
+        >
+          \ Planning \
+        </Typography>
+      </div>
       <Typography variant="h2" className="text-center text-dark-blue-100 mb-10">
         Our Process
       </Typography>
