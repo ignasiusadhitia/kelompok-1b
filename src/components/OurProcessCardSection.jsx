@@ -39,7 +39,7 @@ const data = [
 
 const OurProcessCardSection = () => {
   return (
-    <section className="container mx-auto py-[100px]">
+    <section className="container mx-auto py-[100px] px-4">
       <div className="flex justify-center">
         <Typography
           variant="strong"
@@ -51,7 +51,7 @@ const OurProcessCardSection = () => {
       <Typography variant="h2" className="text-center text-dark-blue-100 mb-10">
         Our Process
       </Typography>
-      <div className="grid grid-cols-4 gap-7">
+      <div className="grid grid-cols-1 md:grid-cols-4 gap-7">
         {data.map((item) => (
           <OurProcessCard
             key={item.index}

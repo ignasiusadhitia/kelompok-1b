@@ -102,7 +102,7 @@ export default function BlogListCard({ maxPosts }) {
       </div>
 
       {/* Grid Layout for Articles */}
-      <div className="grid grid-cols-3 gap-10 container mx-auto px-10 py-10">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-10 container mx-auto px-10 py-10">
         {/* looping to retrieve data */}
         {displayedArticles.map((article, index) => (
           <Link
