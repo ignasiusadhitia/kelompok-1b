@@ -2,7 +2,17 @@ import React from "react";
 import Typography from "./Typography";
 import MaskGroup from "../assets/AssetsAboutPages/MaskGroup.png";
 import Icon from "../assets/AssetsAboutPages/Icon.svg";
+import { Link, useNavigate } from "react-router-dom";
+
 export default function AboutUsSection() {
+  const navigate = useNavigate();
+
+  // Function to handle navigation
+  const handleNavigation = (path) => {
+    navigate(path);
+    window.scrollTo(0, 0);
+  };
+
   return (
     <section className="bg-off-white">
       <div className="container mx-auto px-4">
@@ -35,7 +45,7 @@ export default function AboutUsSection() {
             {/* title end */}
 
             {/* description */}
-            <Typography variant="bodycopy" className="text-lg leading-7 mt-7">
+            <Typography variant="bodycopy" className="text-lg leading-6">
               It is a long established fact that a reader will be distracted by
               the <br /> readable content of a page when looking at its layout.
               The point of <br /> using Lorem Ipsum is that it has a
@@ -43,8 +53,11 @@ export default function AboutUsSection() {
             </Typography>
             {/* description end */}
 
-            <div className="flex bg-[#ffffff] gap-5 px-3 py-2 rounded-[10px] mt-7">
-              <div className="bg-off-white px-3 py-2 rounded-[10px] ">
+            <div
+              onClick={() => handleNavigation("/contact")}
+              className="flex bg-[#ffffff] gap-5 px-3 py-2 rounded-[10px] mt-4 cursor-pointer"
+            >
+              <div className="bg-off-white px-3 py-2 rounded-[10px] flex items-center">
                 <img src={Icon} className="w-[25px]" />
               </div>
 
@@ -53,18 +66,18 @@ export default function AboutUsSection() {
                 <Typography
                   variant="strong"
                   color="text-dark-blue-100"
-                  className="text-lg"
+                  className="text-[14px] md:text-lg"
                 >
                   Get Instant Professional Advice
                 </Typography>
-                <p>
+                <p className="text-sm md:text-sm">
                   Ready to Help:{" "}
-                  <a
+                  <span
                     href="tel:+1356787897"
                     className="text-peach-red-100 font-semibold"
                   >
                     +1 356 678 7897
-                  </a>
+                  </span>
                 </p>
               </div>
               {/* contact end */}
