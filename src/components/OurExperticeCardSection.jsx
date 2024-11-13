@@ -62,9 +62,9 @@ const OurExperticeCardSection = () => {
         Our Expertice
       </Typography>
       <div className="grid grid-cols-3 gap-7">
-        {data.map((item) => (
+        {data.map((item, index) => (
           <OurProcessCard
-            key={item.index}
+            key={index}
             title={item.title}
             description={item.description}
             icon={item.icon}

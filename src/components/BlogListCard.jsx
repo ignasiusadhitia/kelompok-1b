@@ -6,6 +6,8 @@ import Article3 from "../assets/AssetsBlogPages/Article3.png";
 import Person1 from "../assets/AssetsBlogPages/Person1.png";
 import Person2 from "../assets/AssetsBlogPages/Person2.png";
 import Person3 from "../assets/AssetsBlogPages/Person3.png";
+import PropTypes from "prop-types";
+import { Link } from "react-router-dom";
 
 // Data object
 const articles = [
@@ -75,7 +77,8 @@ const articles = [
 ];
 
 // Component
-export default function BlogListCard() {
+export default function BlogListCard({ maxPosts }) {
+  const displayedArticles = maxPosts ? articles.slice(0, maxPosts) : articles;
   return (
     <div>
       <div className="text-center pt-20">
@@ -101,10 +104,10 @@ export default function BlogListCard() {
       {/* Grid Layout for Articles */}
       <div className="grid grid-cols-3 gap-10 container mx-auto px-10 py-10">
         {/* looping to retrieve data */}
-        {articles.map((article, index) => (
-          <div
+        {displayedArticles.map((article, index) => (
+          <Link
             key={index}
-            className="flex flex-col h-fit rounded-lg shadow-md shadow-[#252525]-20 justify-center p-5"
+            className="flex flex-col h-fit rounded-lg shadow-md shadow-[#252525]-20 justify-center p-5 hover:shadow-peach-red-50"
           >
             <img
               src={article.img}
@@ -129,10 +132,14 @@ export default function BlogListCard() {
                 </span>
               </div>
             </div>
-          </div>
+          </Link>
         ))}
         {/* looping to retrieve data end */}
       </div>
     </div>
   );
 }
+
+BlogListCard.propTypes = {
+  maxPosts: PropTypes.number,
+};

@@ -121,7 +121,7 @@ const Navbar = () => {
           </ul>
           <a
             href="#"
-            className="bg-peach-red-100 hover:bg-red-700 text-white font-bold py-2 px-4 rounded"
+            className="bg-peach-red-100 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-md"
           >
             Get in Touch
           </a>

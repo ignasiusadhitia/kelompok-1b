@@ -148,7 +148,7 @@ const Footer = () => {
               className="flex-1 bg-white text-gray-700 px-4 py-2 rounded-md focus:outline-none w-full"
             />
             <div className="flex justify-end mt-4">
-              <button className="bg-red-500 text-white px-4 py-2 rounded-md hover:bg-red-600 focus:outline-none">
+              <button className="bg-peach-red-100 text-white px-4 py-2 rounded-md hover:bg-red-600 focus:outline-none">
                 Submit
               </button>
             </div>
