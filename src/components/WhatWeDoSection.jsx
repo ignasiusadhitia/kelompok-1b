@@ -4,8 +4,17 @@ import goalIcon from "../assets/what-we-do-2.png";
 import heroImg from "../assets/what-we-do-hero.png";
 import Typography from "./Typography";
 import PropTypes from "prop-types";
+import { useNavigate } from "react-router";
 
 const WhatWeDoSection = ({ showButton }) => {
+  const navigate = useNavigate();
+
+  // Function to handle navigation
+  const handleNavigation = (path) => {
+    navigate(path);
+    window.scrollTo(0, 0);
+  };
+
   return (
     <section className="bg-off-white">
       <div className="container grid grid-cols-1 lg:grid-cols-2 gap-10 py-20 mx-auto px-4">
@@ -93,7 +102,10 @@ const WhatWeDoSection = ({ showButton }) => {
             </div>
           </div>
           {showButton && (
-            <button className="bg-peach-red-100 hover:bg-red-600 text-white py-[10px] px-[20px] mt-[30px] rounded-md w-fit">
+            <button
+              className="bg-peach-red-100 hover:bg-red-600 text-white py-[10px] px-[20px] mt-[30px] rounded-md w-fit"
+              onClick={() => handleNavigation("/our-services")}
+            >
               View More
             </button>
           )}

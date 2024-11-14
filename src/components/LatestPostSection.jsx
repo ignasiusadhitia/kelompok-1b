@@ -48,7 +48,7 @@ export default function LatestPostSection() {
             </h3>
             <div className="flex flex-row justify-between items-center mt-3">
               <div className="flex flex-row gap-3 items-center">
-                <img src={Person2} className />
+                <img src={Person2} />
                 <p className="font-bold text-sm">Ranold Jeff</p>
               </div>
               <span className="text-xs">2 Min Read</span>
@@ -74,7 +74,7 @@ export default function LatestPostSection() {
               </h3>
               <div className="flex flex-row justify-between items-center mt-8">
                 <div className="flex flex-row gap-3 items-center">
-                  <img src={Person1} className />
+                  <img src={Person1} />
                   <p className="font-bold text-sm">Patricia Anderson</p>
                 </div>
                 <span className="text-xs">2 Min Read</span>
@@ -99,7 +99,7 @@ export default function LatestPostSection() {
               </h3>
               <div className="flex flex-row justify-between items-center mt-8">
                 <div className="flex flex-row gap-3 items-center">
-                  <img src={Person3} className />
+                  <img src={Person3} />
                   <p className="font-bold text-sm">Elaine Luna</p>
                 </div>
                 <span className="text-xs">2 Min Read</span>
