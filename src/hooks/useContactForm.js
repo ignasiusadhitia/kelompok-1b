@@ -1,5 +1,5 @@
 import { useState } from "react";
-import sendContactForm from "../api/services/sendContactForm";  // Pastikan ini benar
+import ContactService from "../api/services/contactService";
 
 const useContactForm = () => {
   const [formData, setFormData] = useState({
@@ -34,7 +34,7 @@ const useContactForm = () => {
     };
 
     try {
-      const response = await sendContactForm(contactData); // Pastikan ini memanggil fungsi yang benar
+      const response = await ContactService(contactData); // Pastikan ini memanggil fungsi yang benar
       setSuccess(true);
       setFormData({ name: "", email: "", phone: "", message: "" }); // Reset form after success
     } catch (error) {

@@ -1,27 +1,23 @@
-import axios from '../axiosConfig';
 
-const contactService = async () => {
-  const token = localStorage.getItem('token');
-  if (!token) {
-    console.error('No token found. Please log in.');
-    throw new Error('No token found. Please log in.');
-  }
+import instance from "../axiosConfig";
 
+// Ambil URL API dasar dari environment variable
+const API_URL = import.meta.env.VITE_BASE_URL;
+
+// Fungsi untuk mengirimkan data kontak
+const sendContactForm = async (contactData) => {
   try {
-    const response = await axios.get('/api/contact', {
+    const response = await instance.post(`${API_URL}/api/contact`, contactData, {
       headers: {
-        Authorization: `Bearer ${token}`, // Ambil token dari localStorage
+        "Content-Type": "application/json",
       },
     });
     return response.data;
   } catch (error) {
-    // Log detail error dari server
-    console.error(
-      'Error fetching contact messages:',
-      error.response?.data || error.message
+    throw new Error(
+      error.response ? error.response.data.message : error.message
     );
-    throw new Error(error.response?.data?.message || error.message);
   }
 };
 
-export default contactService;
+export default sendContactForm;
