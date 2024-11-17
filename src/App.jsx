@@ -8,6 +8,7 @@ import {
   NotFound,
   OurServices,
   Portfolio,
+  BlogDetail,
 } from "./pages";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
@@ -23,6 +24,7 @@ const App = () => {
         <Route path="/our-services" element={<OurServices />} />
         <Route path="/portfolio" element={<Portfolio />} />
         <Route path="/blog" element={<Blog />} />
+        <Route path="/blog/detail" element={<BlogDetail />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="*" element={<NotFound />} />
       </Routes>

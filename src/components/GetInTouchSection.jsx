@@ -4,8 +4,12 @@ import emailIcon from "../assets/AssetContactPages/email-icon.png";
 import phoneIcon from "../assets/AssetContactPages/phone-icon.png";
 import locationIcon from "../assets/AssetContactPages/location-icon.png";
 import PropTypes from "prop-types";
+import useContactForm from "../hooks/useContactForm";
 
 const GetInTouchSection = ({ titleColor = "text-dark-blue-100" }) => {
+  const { formData, handleChange, handleSubmit, isLoading, error, success } =
+    useContactForm();
+
   return (
     <div className="min-h-screen py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-6xl mx-auto">
@@ -25,10 +29,14 @@ const GetInTouchSection = ({ titleColor = "text-dark-blue-100" }) => {
         </div>
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
           <div className="bg-white p-8 rounded-lg shadow-sm lg:col-span-2">
-            <form className="space-y-6">
+            <form className="space-y-6" onSubmit={handleSubmit}>
               <div>
                 <input
                   type="text"
+                  name="name"
+                  id="name"
+                  value={formData.name}
+                  onChange={handleChange}
                   placeholder="Name"
                   className="w-full px-4 py-3 rounded-md bg-gray-50 border border-gray-200 focus:outline-none focus:ring-2 focus:ring-peach-red-100"
                 />
@@ -36,6 +44,10 @@ const GetInTouchSection = ({ titleColor = "text-dark-blue-100" }) => {
               <div>
                 <input
                   type="email"
+                  name="email"
+                  id="email"
+                  value={formData.email}
+                  onChange={handleChange}
                   placeholder="Email"
                   className="w-full px-4 py-3 rounded-md bg-gray-50 border border-gray-200 focus:outline-none focus:ring-2 focus:ring-peach-red-100"
                 />
@@ -43,12 +55,20 @@ const GetInTouchSection = ({ titleColor = "text-dark-blue-100" }) => {
               <div>
                 <input
                   type="tel"
+                  name="phone"
+                  id="phone"
+                  value={formData.phone}
+                  onChange={handleChange}
                   placeholder="Phone"
                   className="w-full px-4 py-3 rounded-md bg-gray-50 border border-gray-200 focus:outline-none focus:ring-2 focus:ring-peach-red-100"
                 />
               </div>
               <div>
                 <textarea
+                  name="message"
+                  id="message"
+                  value={formData.message}
+                  onChange={handleChange}
                   placeholder="Your Message"
                   rows="4"
                   className="w-full px-4 py-3 rounded-md bg-gray-50 border border-gray-200 focus:outline-none focus:ring-2 focus:ring-peach-red-100"
@@ -57,12 +77,18 @@ const GetInTouchSection = ({ titleColor = "text-dark-blue-100" }) => {
               <div className="flex justify-center lg:justify-start">
                 <button
                   type="submit"
+                  disabled={isLoading}
                   className="w-32 bg-peach-red-100 text-white px-6 py-3 rounded-md hover:bg-red-600 transition-colors"
                 >
-                  Send Now
+                  {isLoading ? "Sending..." : "Send Now"}
                 </button>
               </div>
             </form>
+
+            {error && <p className="text-red-500 mt-4">{error}</p>}
+            {success && (
+              <p className="text-green-500 mt-4">Message sent successfully!</p>
+            )}
           </div>
           <div className="bg-white space-y-8 p-8 rounded-lg">
             <div className="flex items-start space-x-4">
@@ -108,7 +134,7 @@ const GetInTouchSection = ({ titleColor = "text-dark-blue-100" }) => {
               </h3>
               <div className="flex space-x-4">
                 <a
-                  href="#"
+                  href= "https://www.linkedin.com" target="_blank" rel="noopener noreferrer"
                   className="bg-peach-red-100 p-3 rounded-md text-white hover:bg-red-600 transition-colors"
                 >
                   <svg
@@ -120,7 +146,7 @@ const GetInTouchSection = ({ titleColor = "text-dark-blue-100" }) => {
                   </svg>
                 </a>
                 <a
-                  href="#"
+                  href="https://www.instagram.com" target="_blank" rel="noopener noreferrer"
                   className="bg-peach-red-100 p-3 rounded-md text-white hover:bg-red-600 transition-colors"
                 >
                   <svg
@@ -132,7 +158,7 @@ const GetInTouchSection = ({ titleColor = "text-dark-blue-100" }) => {
                   </svg>
                 </a>
                 <a
-                  href="#"
+                  href="https://www.facebook.com" target="_blank" rel="noopener noreferrer"
                   className="bg-peach-red-100 p-3 rounded-md text-white hover:bg-red-600 transition-colors"
                 >
                   <svg
@@ -144,7 +170,7 @@ const GetInTouchSection = ({ titleColor = "text-dark-blue-100" }) => {
                   </svg>
                 </a>
                 <a
-                  href="#"
+                  href="https://www.x.com" target="_blank" rel="noopener noreferrer"
                   className="bg-peach-red-100 p-3 rounded-md text-white hover:bg-red-600 transition-colors"
                 >
                   <svg
