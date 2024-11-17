@@ -7,16 +7,19 @@ import reactIcon from "../assets/react-icon.png";
 import wordpressIcon from "../assets/wordpress-icon.png";
 import wixIcon from "../assets/wix-icon.png";
 import { useNavigate } from "react-router-dom";
+import useSubscribeForm from "../hooks/useSubscribeForm";
 
 const Footer = () => {
-    const navigate = useNavigate();
+  const navigate = useNavigate();
+  const { formData, handleChange, handleSubmit, isLoading, error, success } =
+  useSubscribeForm();
   
   // Function to handle navigation
     const handleNavigation = (path) => {
       navigate(path);
       window.scrollTo(0, 0);
     };
-
+    console.log(formData, error);
   return (
     <footer className="bg-dark-blue-100 text-white py-10 md:py-16">
       <div className="container mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-8">
@@ -28,31 +31,31 @@ const Footer = () => {
             the readable content of a page when looking at
           </p>
           <div className="flex space-x-4">
-            <a href="#" className="bg-white rounded-lg p-2 hover:bg-red-200">
+            <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" className="bg-white rounded-lg p-2 hover:bg-red-200">
               <img
                 src={linkedinIcon}
                 alt="linkedin-icon"
                 className="w-5 h-5"
               />
             </a>
-            <a href="#" className="bg-white rounded-lg p-2 hover:bg-red-200">
+            <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" className="bg-white rounded-lg p-2 hover:bg-red-200">
               <img
                 src={instagramIcon}
-                alt="linkedin-icon"
+                alt="Instagram-icon"
                 className="w-5 h-5"
               />
             </a>
-            <a href="#" className="bg-white rounded-lg p-2 hover:bg-red-200">
+            <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" className="bg-white rounded-lg p-2 hover:bg-red-200">
               <img
                 src={facebookIcon}
-                alt="linkedin-icon"
+                alt="Facebook-icon"
                 className="w-5 h-5"
               />
             </a>
-            <a href="#" className="bg-white rounded-lg p-2 hover:bg-red-200">
+            <a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer" className="bg-white rounded-lg p-2 hover:bg-red-200">
               <img
                 src={twitterIcon}
-                alt="linkedin-icon"
+                alt="Twitter-icon"
                 className="w-5 h-5"
               />
             </a>
@@ -150,18 +153,28 @@ const Footer = () => {
             It is a long established fact that a reader will be distracted by
             the readable content of a page
           </p>
-          <div className="pt-4">
+          <form onSubmit={handleSubmit} className="pt-4">
             <input
               type="email"
+              name="email"
+              id="email"
+              value={formData.email}
+              onChange={handleChange}
               placeholder="Email"
               className="flex-1 bg-white text-gray-700 px-4 py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-peach-red-100 w-full"
             />
             <div className="flex justify-end mt-4">
-              <button className="bg-peach-red-100 text-white px-4 py-2 rounded-md hover:bg-red-600 focus:outline-none">
-                Submit
+              <button
+                type="submit"
+                disabled={isLoading}
+                className="bg-peach-red-100 text-white px-4 py-2 rounded-md hover:bg-red-600 focus:outline-none"
+              >
+                {isLoading ? "Submitting..." : "Submit"}
               </button>
             </div>
-          </div>
+          </form>
+          {success && <p className="text-green-500 mt-2">Subscribed successfully!</p>}
+          {error && <p className="text-red-500 mt-2">Failed to subscribe. Try again.</p>}
         </div>
       </div>
     </footer>
