@@ -134,7 +134,7 @@ const GetInTouchSection = ({ titleColor = "text-dark-blue-100" }) => {
               </h3>
               <div className="flex space-x-4">
                 <a
-                  href="#"
+                  href= "https://www.linkedin.com" target="_blank" rel="noopener noreferrer"
                   className="bg-peach-red-100 p-3 rounded-md text-white hover:bg-red-600 transition-colors"
                 >
                   <svg
@@ -146,7 +146,7 @@ const GetInTouchSection = ({ titleColor = "text-dark-blue-100" }) => {
                   </svg>
                 </a>
                 <a
-                  href="#"
+                  href="https://www.instagram.com" target="_blank" rel="noopener noreferrer"
                   className="bg-peach-red-100 p-3 rounded-md text-white hover:bg-red-600 transition-colors"
                 >
                   <svg
@@ -158,7 +158,7 @@ const GetInTouchSection = ({ titleColor = "text-dark-blue-100" }) => {
                   </svg>
                 </a>
                 <a
-                  href="#"
+                  href="https://www.facebook.com" target="_blank" rel="noopener noreferrer"
                   className="bg-peach-red-100 p-3 rounded-md text-white hover:bg-red-600 transition-colors"
                 >
                   <svg
@@ -170,7 +170,7 @@ const GetInTouchSection = ({ titleColor = "text-dark-blue-100" }) => {
                   </svg>
                 </a>
                 <a
-                  href="#"
+                  href="https://www.x.com" target="_blank" rel="noopener noreferrer"
                   className="bg-peach-red-100 p-3 rounded-md text-white hover:bg-red-600 transition-colors"
                 >
                   <svg
