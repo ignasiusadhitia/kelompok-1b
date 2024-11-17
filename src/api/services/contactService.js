@@ -5,7 +5,7 @@ import instance from "../axiosConfig";
 const API_URL = import.meta.env.VITE_BASE_URL;
 
 // Fungsi untuk mengirimkan data kontak
-const sendContactForm = async (contactData) => {
+const contactService = async (contactData) => {
   try {
     const response = await instance.post(`${API_URL}/api/contact`, contactData, {
       headers: {
@@ -20,4 +20,4 @@ const sendContactForm = async (contactData) => {
   }
 };
 
-export default sendContactForm;
+export default contactService;
